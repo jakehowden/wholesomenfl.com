@@ -1,6 +1,6 @@
-import { NflPlayer } from "./nflPlayer";
+import NflPlayer from "./NflPlayer";
 
 export interface GetNflPlayersResponse {
-    data: { [key: string]: NflPlayer };
+    data: Map<string, NflPlayer>;
 }
 
