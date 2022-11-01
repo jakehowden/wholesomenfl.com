@@ -1,9 +1,9 @@
 import { Task } from "./Task";
 import axios from 'axios';
-import express from "express";
 import { GetNflPlayersResponse } from "../../models/GetNflPlayersResponse";
 import NflPlayer from "../../models/NflPlayer";
-import { connectToDatabase } from "../../database/database";
+import * as database from "../../database/database";
+import express from "express";
 import { playersRouter } from "../../database/players.router";
 
 const app = express();
@@ -26,18 +26,19 @@ export class UpdateNFLPlayersTask extends Task {
               players.push(new NflPlayer(key, player.first_name, player.last_name, player.position, player.team, player.status));
             });
 
-            connectToDatabase()
-            .then(() => {
+            database.connect()
+              .then(() => {
                 app.use("/players", playersRouter);
       
-                app.listen(port, () => {console.log(`Server started at http://localhost:${port}`);
-              });
+                app.listen(port, () => {
+                  console.log(`Server started at http://localhost:${port}`);
+                });
             })
             .catch((error: Error) => {
                 console.error("Database connection failed", error);
                 process.exit();
             });
-
+            
           } catch (error) {
             if (axios.isAxiosError(error)) {
               console.log('error message: ', error.message);

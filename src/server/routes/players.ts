@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
-import { collections } from "./database";
-import NflPlayer from "../models/NflPlayer";
+import NflPlayer from "../../models/NflPlayer";
+import { getDb } from "../db/conn";
 
 export const playersRouter = express.Router();
 
@@ -10,7 +10,8 @@ playersRouter.get("/:ids", async (req: Request, res: Response) => {
     try {
         let ids = req.body as string[];
         let query = { sleeper_id: { $in: ids } };
-        let players = (await collections.players!.find(query)).toArray() as unknown as NflPlayer[];
+        let db = getDb();
+        let players = (db.collection("players").find(query)).toArray() as unknown as NflPlayer[];
 
         if (players) {
             res.status(200).send(players);
@@ -23,7 +24,8 @@ playersRouter.get("/:ids", async (req: Request, res: Response) => {
 playersRouter.post("/", async (req: Request, res: Response) => {
     try {
         let newPlayers = req.body as NflPlayer[];
-        let result = await collections.players!.insertMany(newPlayers);
+        let db = getDb();
+        let result = await db.collection("players").insertMany(newPlayers);
 
         result
             ? res.status(201).send(`Successfully created a new players`)

@@ -1,4 +1,8 @@
+import { Task } from "./tasks/Task";
+import { UpdateNFLPlayersTask } from "./tasks/UpdateNFLPlayersTask";
+
 let daySeconds: number = 86400000;
+let tasks: Task[] = [new UpdateNFLPlayersTask()]
 
 export const Run = async () => {
     let currentTime: number = new Date().getTime();
@@ -12,7 +16,9 @@ export const Run = async () => {
     setTimeout(function() {
       setInterval(function() {
   
-        //your code
+        tasks.forEach(task => {
+          task.run();
+        });
   
       }, daySeconds);
     }, timeLeft);
