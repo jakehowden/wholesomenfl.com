@@ -2,9 +2,9 @@ import { Task } from "./Task";
 import axios from 'axios';
 import { GetNflPlayersResponse } from "../../models/GetNflPlayersResponse";
 import NflPlayer from "../../models/NflPlayer";
-import * as database from "../../database/database";
+import * as database from "../../server/db/conn"
 import express from "express";
-import { playersRouter } from "../../database/players.router";
+import { playersRouter } from "../../server/routes/players";
 
 const app = express();
 const port = 8080;
