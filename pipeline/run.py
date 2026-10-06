@@ -1,4 +1,4 @@
-"""Pipeline entry point: python -m pipeline.run [--no-llm] [--refresh]"""
+"""Pipeline entry point: python -m pipeline.run [--no-llm] [--llm-limit N] [--refresh]"""
 from __future__ import annotations
 
 import argparse
@@ -75,6 +75,7 @@ def main(argv=None) -> None:
     ap = argparse.ArgumentParser(prog="python -m pipeline.run")
     ap.add_argument("--no-llm", action="store_true", help="skip Claude calls")
     ap.add_argument("--refresh", action="store_true", help="bypass the fetch cache")
+    ap.add_argument("--llm-limit", type=int, default=None, metavar="N", help="cap the number of outlooks")
     args = ap.parse_args(argv)
     fetch.REFRESH = args.refresh
 
@@ -101,7 +102,10 @@ def main(argv=None) -> None:
     # PHASE 07: Claude outlooks + briefing
     build = _hook("llm")
     if build and not args.no_llm:
+        data["llm_limit"] = args.llm_limit
         build(data)
+    elif args.no_llm:
+        print("--no-llm: skipping Claude outlooks and briefing")
 
     lg = data["league"]
     meta = {
