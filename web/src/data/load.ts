@@ -5,6 +5,8 @@ export interface PortalData {
   players: Player[];
   league: League;
   outlooks: Record<string, Outlook>;
+  /** Live Sleeper rosters and starters. Arrives after first render; absent if Sleeper is unreachable. */
+  live?: LiveData | null;
 }
 
 async function getJSON<T>(url: string): Promise<T> {
