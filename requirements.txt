@@ -1,0 +1,6 @@
+pandas
+pyarrow
+requests
+anthropic
+cryptography
+pytest
