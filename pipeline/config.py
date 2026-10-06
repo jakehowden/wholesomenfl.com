@@ -21,6 +21,18 @@ CALIB = {"QB": .67, "RB": .80, "WR": .85, "TE": .80, "K": 1.0, "DEF": 1.0}
 AVAIL = {"Out": 0, "IR": 0, "PUP": 0, "Sus": 0, "Doubtful": .3, "Questionable": .85}
 PLAYOFF_WEEKS = (15, 16, 17)
 PLAYOFF_WT = 1.5
+# league-wide starters per position (SF/FLEX folded in): calibration pool and "startable" range for BUY
+STARTERS = {"QB": 15, "RB": 35, "WR": 35, "TE": 12, "K": 10, "DEF": 10}
+IR_WEEKS = 4                # IR zeroes weeks cur .. cur+IR_WEEKS-1
+INJURY_WEEKS = 2            # other AVAIL statuses apply to cur and cur+1
+REPL_FA_N = 3               # replacement = mean of the N best free agents
+FA_KEEP = 300               # free agents kept in players.json (by ROS)
+USAGE_STD_FLOOR = 0.03
+TAG_USAGE_Z = 0.75
+TAG_LUCK = 15.0
+TAG_MARKET_GAP = 15
+BREAKOUT_SNAP = 0.15
+BREAKOUT_TS = 0.08
 LAST_WEEK = 17
 SIM_RUNS = 10000
 SIM_SD = 22.0
