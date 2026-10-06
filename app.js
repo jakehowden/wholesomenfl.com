@@ -189,6 +189,21 @@ function optimalLineup(playerIds, players, slots) {
   return { total: Math.round(total * 10) / 10, used, assigned };
 }
 
+function combinations(list, maxSize) {
+  const out = [];
+  const walk = (start, picked) => {
+    if (picked.length) out.push(picked.slice());
+    if (picked.length === maxSize) return;
+    for (let i = start; i < list.length; i++) {
+      picked.push(list[i]);
+      walk(i + 1, picked);
+      picked.pop();
+    }
+  };
+  walk(0, []);
+  return out;
+}
+
 function teamProfile(ctx) {
   const { league, rosters, users, values, players } = ctx;
   const slots = startingSlots(league);
@@ -245,11 +260,17 @@ function sweepTrades(transactions, myRosterId) {
   const netFaab = new Map();
   const withRoster = new Map();
   const cashDeals = [];
+  const shapes = new Map();
   let total = 0;
   let vetoed = 0;
   for (const t of transactions) {
     if (t.type !== "trade") continue;
     total++;
+    const received = new Map();
+    for (const rid of t.roster_ids || []) received.set(rid, 0);
+    for (const rid of Object.values(t.adds || {})) received.set(rid, (received.get(rid) || 0) + 1);
+    const shape = [...received.values()].sort((a, b) => b - a).join("-");
+    shapes.set(shape, (shapes.get(shape) || 0) + 1);
     if (t.status && t.status !== "complete") vetoed++;
     const ids = t.roster_ids || [];
     for (const rid of ids) counts.set(rid, (counts.get(rid) || 0) + 1);
@@ -265,7 +286,10 @@ function sweepTrades(transactions, myRosterId) {
     }
   }
   cashDeals.sort((a, b) => b.amount - a.amount);
-  return { counts, netFaab, withRoster, cashDeals, total, vetoed };
+  const peak = Math.max(1, ...shapes.values());
+  const shapeFit = (send, get) => (shapes.get([send, get].sort((a, b) => b - a).join("-")) || 0) / peak;
+  const topShapes = [...shapes.entries()].sort((a, b) => b[1] - a[1]);
+  return { counts, netFaab, withRoster, cashDeals, shapes, shapeFit, topShapes, total, vetoed };
 }
 
 function freeAgents(ctx) {
@@ -371,6 +395,7 @@ function tradeBoard(ctx) {
   const mySurplus = [...me.surplus]
     .filter((p) => surplusValue(p) > 0 || p.proj > 0)
     .sort((a, b) => surplusValue(a) - surplusValue(b) || a.proj - b.proj);
+  const packages = combinations(mySurplus, MAX_SEND);
 
   for (const rival of ctx.teams) {
     if (rival.rosterId === me.rosterId) continue;
@@ -381,49 +406,50 @@ function tradeBoard(ctx) {
 
       const targetValue = values.get(target.id)?.value || 0;
       const need = targetValue * FAIRNESS_FLOOR;
-      const send = [];
-      let sent = 0;
-      for (const cand of mySurplus) {
-        if (send.length >= MAX_SEND) break;
-        if (sent >= need) break;
-        send.push(cand);
-        sent += values.get(cand.id)?.value || 0;
-      }
-      for (let i = send.length - 1; i >= 0 && send.length > 1; i--) {
-        const without = sent - (values.get(send[i].id)?.value || 0);
-        if (without >= need) {
-          sent = without;
-          send.splice(i, 1);
-        }
-      }
       const budgetShare = budget ? rival.faabLeft / budget : 1;
       const cashWelcome = budgetShare <= CASH_BUDGET_SHARE || rival.netFaab >= CASH_SELLER_NET;
-      const shortfall = Math.max(0, need - sent);
-      const cash = cashWelcome && shortfall > 0
-        ? clamp(Math.ceil(shortfall / VALUE_PER_DOLLAR), 0, me.faabLeft)
-        : 0;
-      const paid = sent + cash * VALUE_PER_DOLLAR;
 
-      const fairness = targetValue > 0 ? Math.min(1, paid / targetValue) : 1;
+      let best = null;
+      for (const combo of packages) {
+        const sent = combo.reduce((sum, p) => sum + surplusValue(p), 0);
+        const shortfall = Math.max(0, need - sent);
+        const cash = cashWelcome && shortfall > 0
+          ? clamp(Math.ceil(shortfall / VALUE_PER_DOLLAR), 0, me.faabLeft)
+          : 0;
+        const paid = sent + cash * VALUE_PER_DOLLAR;
+        const fair = targetValue > 0 ? Math.min(1, paid / targetValue) : 1;
+        const shape = ctx.tradeStats.shapeFit(combo.length, 1);
+        const overpay = targetValue > 0 ? Math.min(1, Math.max(0, paid - targetValue) / targetValue) : 0;
+        const rank = 0.5 * fair + 0.38 * shape - 0.12 * overpay;
+        if (!best || rank > best.rank) best = { combo, sent, cash, paid, fair, shape, rank };
+      }
+      if (!best) continue;
+
+      const send = best.combo;
+      const cash = best.cash;
+      const paid = best.paid;
+      const fairness = best.fair;
+      const shapeFit = best.shape;
       const cashSeller = clamp(rival.netFaab / 81, 0, 1);
       const lowBudget = clamp(1 - budgetShare, 0, 1);
       const cashAppetite = cash > 0 ? Math.max(cashSeller, lowBudget) : 0.5;
       const priorMe = Math.min(1, rival.withMe / 3);
 
       const accept =
-        0.3 * rival.tradeRate + 0.15 * priorMe + 0.15 * 1 + 0.2 * cashAppetite + 0.2 * fairness;
+        0.25 * rival.tradeRate + 0.12 * priorMe + 0.12 * 1 + 0.16 * cashAppetite + 0.2 * fairness + 0.15 * shapeFit;
 
       offers.push({
         rival,
         target,
         targetValue,
         send,
-        sentValue: sent,
+        sentValue: best.sent,
         cash,
         paid,
         gain,
+        shape: send.length + "-for-1",
         accept: clamp(accept, 0, 0.98),
-        parts: { tradeRate: rival.tradeRate, priorMe, benchFit: 1, cashAppetite, fairness },
+        parts: { tradeRate: rival.tradeRate, priorMe, benchFit: 1, cashAppetite, fairness, shapeFit },
       });
     }
   }
@@ -698,6 +724,15 @@ function renderTradeDetail(ctx) {
   reasons.push(
     esc(o.target.name) + " is <strong>on their bench</strong>, outside their own best lineup. They give up nothing they start."
   );
+  const shapeKey = [o.send.length, 1].sort((a, b) => b - a).join("-");
+  const shapeCount = ctx.tradeStats.shapes.get(shapeKey) || 0;
+  const commonest = ctx.tradeStats.topShapes[0];
+  reasons.push(
+    "Shape: this is a <strong>" + esc(o.shape) + "</strong>, which this league has done <strong>" +
+      shapeCount + "</strong> time" + (shapeCount === 1 ? "" : "s") + " in " + ctx.tradeStats.total + " trades" +
+      (commonest ? ". Their most common shape is " + esc(commonest[0].split("-").join("-for-")) + " (" + commonest[1] + "×)" : "") +
+      "."
+  );
   if (o.cash > 0) {
     const budget = ctx.league.settings?.waiver_budget ?? 0;
     if (budget && r.faabLeft <= budget * CASH_BUDGET_SHARE)
@@ -747,6 +782,7 @@ function renderTradeDetail(ctx) {
     '<span class="score-part">bench fit ' + Math.round(parts.benchFit * 100) + "%</span>" +
     '<span class="score-part">cash appetite ' + Math.round(parts.cashAppetite * 100) + "%</span>" +
     '<span class="score-part">fairness ' + Math.round(parts.fairness * 100) + "%</span>" +
+    '<span class="score-part">shape ' + Math.round((parts.shapeFit || 0) * 100) + "%</span>" +
     "</div></div></div>" +
     '<div class="reasons">' + reasons.map((x) => '<div class="reason">' + x + "</div>").join("") + "</div>" +
     '<button class="btn btn-primary btn-wide" type="button" id="copyOffer">Copy offer text</button>';
