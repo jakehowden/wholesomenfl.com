@@ -65,7 +65,10 @@ export function App() {
       .then((d) => {
         setData(d);
         loadLive(d.meta.league_id)
-          .then((live) => setLeagueName(live.league.name))
+          .then((live) => {
+            setLeagueName(live.league.name);
+            setData((cur) => cur && { ...cur, live });
+          })
           .catch(() => {});
       })
       .catch((e: unknown) => setError(e instanceof Error ? e.message : String(e)));
@@ -113,15 +116,15 @@ export function App() {
           <p>Loading…</p>
         </div>
       ) : (
-        <PlayerDrawerProvider players={data.players}>
-          <CompareProvider players={data.players}>
+        <CompareProvider data={data}>
+          <PlayerDrawerProvider data={data}>
             <main>
               <div className="panelgroup">
                 <current.View data={data} />
               </div>
             </main>
-          </CompareProvider>
-        </PlayerDrawerProvider>
+          </PlayerDrawerProvider>
+        </CompareProvider>
       )}
     </>
   );
