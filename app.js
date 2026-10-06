@@ -44,6 +44,7 @@ async function getJSON(url) {
 
 let STATE = null;
 let SELECTED_TRADE = 0;
+let TABS_READY = false;
 
 function progress(pct, msg) {
   const fill = $("bootFill");
@@ -675,6 +676,10 @@ function renderPartners(ctx) {
 
 function renderTrades(ctx) {
   const rows = ctx.trades;
+  const top = ctx.tradeStats.topShapes[0];
+  $("tradeNote").textContent =
+    "Every target sits on a rival's bench, outside their own best lineup. Packages are built in the shapes this league actually completes" +
+    (top ? " — most often " + top[0].split("-").join("-for-") + ", " + top[1] + " of " + ctx.tradeStats.total + " trades." : ".");
   const head =
     "<thead><tr><th>YOU SEND</th><th>YOU GET</th><th>PARTNER</th>" +
     "<th class='num'>&Delta;PTS</th><th class='num'>VALUE</th><th class='num'>LIKELY</th></tr></thead>";
@@ -869,6 +874,149 @@ function renderRoster(ctx) {
   $("rosterTable").innerHTML = head + "<tbody>" + body + "</tbody>";
 }
 
+function renderBudget(ctx) {
+  const { me, league, teams } = ctx;
+  const budget = league.settings?.waiver_budget ?? 0;
+  const weeksLeft = Math.max(1, (league.settings?.playoff_week_start || 15) - ctx.week);
+  const thisWeek = ctx.waivers.slice(0, 3).reduce((s, r) => s + r.bid, 0);
+  const sweetener = ctx.trades.filter((t) => t.cash > 0).slice(0, 2).reduce((s, t) => s + t.cash, 0);
+  const richer = teams.filter((t) => t.rosterId !== me.rosterId && t.faabLeft > me.faabLeft).length;
+  const cards = [
+    {
+      fig: "$" + me.faabLeft,
+      label: "REMAINING",
+      note: "of $" + budget + ", with " + weeksLeft + " weeks before the playoffs. None of it carries into next season.",
+      tone: "pos",
+    },
+    {
+      fig: "$" + thisWeek,
+      label: "CLAIM NOW",
+      note: "The three best claims on the board together. Rival demand is priced in, so these are not bidding wars.",
+      tone: "",
+    },
+    {
+      fig: "$" + Math.round(me.faabLeft / weeksLeft),
+      label: "PER WEEK IF SPREAD",
+      note: "Even split across the weeks left. Treat it as a floor, not a plan — injuries make the wire spiky.",
+      tone: "",
+    },
+    {
+      fig: sweetener ? "$" + sweetener : "—",
+      label: "HOLD FOR TRADES",
+      note: sweetener
+        ? "Cash only moves two managers here. Everyone else wants players."
+        : "No current offer needs cash. Spend it on the wire instead.",
+      tone: "",
+    },
+    {
+      fig: String(richer),
+      label: "RIVALS WITH MORE",
+      note: richer === 0 ? "You hold the largest budget in the league." : "teams can outbid you on any single claim.",
+      tone: richer <= 2 ? "pos" : "cau",
+    },
+  ];
+  $("budget").innerHTML = cards
+    .map(
+      (c) =>
+        '<div class="bline"><div class="detail-label">' + c.label +
+        '</div><div class="bline-fig ' + c.tone + '">' + c.fig +
+        '</div><div class="bline-note">' + esc(c.note) + "</div></div>"
+    )
+    .join("");
+}
+
+function renderShapes(ctx) {
+  const rows = ctx.tradeStats.topShapes;
+  const peak = rows.length ? rows[0][1] : 1;
+  $("shapes").innerHTML = rows
+    .map(([shape, n]) => {
+      const label = shape.split("-").join("-for-");
+      return (
+        '<div class="shaperow"><span class="shape-name">' + esc(label) +
+        '</span><span class="shape-bar"><i style="width:' + Math.round((n / peak) * 100) +
+        '%"></i></span><span class="shape-n">' + n + " · " +
+        Math.round((n / ctx.tradeStats.total) * 100) + "%</span></div>"
+      );
+    })
+    .join("");
+}
+
+function renderLeague(ctx) {
+  const ranked = [...ctx.teams].sort((a, b) => b.wins - a.wins || b.pf - a.pf);
+  const byValue = [...ctx.teams].sort((a, b) => b.rosterValue - a.rosterValue);
+  const valueRank = new Map(byValue.map((t, i) => [t.rosterId, i + 1]));
+  const playoffTeams = ctx.league.settings?.playoff_teams || 6;
+  $("leagueNote").textContent =
+    ctx.teams.length + " teams, top " + playoffTeams + " make the playoffs · " +
+    ctx.tradeStats.total + " trades on record, " + ctx.tradeStats.vetoed + " vetoed";
+  const head =
+    "<thead><tr><th>#</th><th>TEAM</th><th>W–L</th><th class='num'>PF</th><th class='num'>PA</th>" +
+    "<th class='num'>VALUE</th><th class='num'>RANK</th><th class='num'>FAAB</th><th class='num'>TRADES</th><th>CASH</th></tr></thead>";
+  const body = ranked
+    .map((t, i) => {
+      const mine = t.rosterId === ctx.me.rosterId;
+      const cut = i + 1 <= playoffTeams;
+      const cash =
+        t.netFaab > 0 ? '<span class="pos">sells +$' + t.netFaab + "</span>"
+        : t.netFaab < 0 ? '<span class="cau">buys −$' + Math.abs(t.netFaab) + "</span>"
+        : '<span class="dim">—</span>';
+      return (
+        "<tr class='" + (mine ? "me" : "") + "'><td class='num " + (cut ? "pos" : "dim") + "'>" + (i + 1) +
+        "</td><td class='name'>" + esc(t.name) + (mine ? ' <span class="pos">you</span>' : "") +
+        "</td><td class='" + (t.winPct >= 0.5 ? "pos" : "neg") + "'>" + t.wins + "–" + t.losses +
+        "</td><td class='num'>" + n1(t.pf) +
+        "</td><td class='num dim'>" + n1(t.pa) +
+        "</td><td class='num'>" + commas(t.rosterValue) +
+        "</td><td class='num dim'>" + valueRank.get(t.rosterId) +
+        "</td><td class='num'>$" + t.faabLeft +
+        "</td><td class='num'>" + t.trades +
+        "</td><td>" + cash + "</td></tr>"
+      );
+    })
+    .join("");
+  $("leagueTable").innerHTML = head + "<tbody>" + body + "</tbody>";
+}
+
+function setCounts(ctx) {
+  $("count-overview").textContent = ctx.actions.length;
+  $("count-waivers").textContent = ctx.waivers.length;
+  $("count-trades").textContent = ctx.trades.length;
+  $("count-team").textContent = ctx.me.surplus.length;
+}
+
+function initTabs() {
+  if (TABS_READY) return;
+  TABS_READY = true;
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const show = (id) => {
+    for (const t of tabs) {
+      const on = t.id === id;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+    }
+    try {
+      localStorage.setItem("tab", id);
+    } catch (e) {}
+  };
+  for (const [i, t] of tabs.entries()) {
+    t.addEventListener("click", () => show(t.id));
+    t.addEventListener("keydown", (e) => {
+      const map = { ArrowRight: i + 1, ArrowLeft: i - 1, Home: 0, End: tabs.length - 1 };
+      if (!(e.key in map)) return;
+      e.preventDefault();
+      const next = tabs[(map[e.key] + tabs.length) % tabs.length];
+      next.focus();
+      show(next.id);
+    });
+  }
+  let saved = null;
+  try {
+    saved = localStorage.getItem("tab");
+  } catch (e) {}
+  show(tabs.some((t) => t.id === saved) ? saved : tabs[0].id);
+}
+
 function renderHeader(ctx) {
   const { me, league, teams } = ctx;
   $("teamName").innerHTML = esc(me.name);
@@ -934,15 +1082,21 @@ async function boot(leagueId) {
     renderKpis(ctx);
     renderActions(ctx);
     renderWaivers(ctx);
+    renderBudget(ctx);
     renderPartners(ctx);
+    renderShapes(ctx);
     renderTrades(ctx);
     renderLineup(ctx);
     renderSurplus(ctx);
     renderRoster(ctx);
+    renderLeague(ctx);
+    setCounts(ctx);
 
     progress(100, "Ready");
     $("boot").style.display = "none";
+    $("tabs").hidden = false;
     $("app").hidden = false;
+    initTabs();
   } catch (err) {
     $("boot").style.display = "none";
     $("fatalMsg").textContent = err.message || String(err);
