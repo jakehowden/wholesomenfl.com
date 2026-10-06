@@ -4,11 +4,7 @@ const DEFAULT_LEAGUE = "1383485349862338560";
 const MY_USERNAME = "jsh96";
 const FANTASY_POS = ["QB", "RB", "WR", "TE", "K", "DEF"];
 const GAIN_CAP = 25;
-const VALUE_PER_DOLLAR = 45;
 const MAX_SEND = 3;
-const FAIRNESS_FLOOR = 0.95;
-const CASH_BUDGET_SHARE = 0.15;
-const CASH_SELLER_NET = 40;
 
 const SLOT_ELIGIBILITY = {
   QB: ["QB"],
@@ -226,7 +222,6 @@ function teamProfile(ctx) {
     const s = r.settings || {};
     const spent = s.waiver_budget_used || 0;
     const trades = ctx.tradeStats.counts.get(r.roster_id) || 0;
-    const netFaab = ctx.tradeStats.netFaab.get(r.roster_id) || 0;
     const withMe = ctx.tradeStats.withRoster.get(r.roster_id) || 0;
     const wins = s.wins || 0;
     const losses = s.losses || 0;
@@ -250,7 +245,6 @@ function teamProfile(ctx) {
       faabSpent: spent,
       trades,
       tradeRate: trades / maxTrades,
-      netFaab,
       withMe,
     };
   });
@@ -258,9 +252,7 @@ function teamProfile(ctx) {
 
 function sweepTrades(transactions, myRosterId) {
   const counts = new Map();
-  const netFaab = new Map();
   const withRoster = new Map();
-  const cashDeals = [];
   const shapes = new Map();
   let total = 0;
   let vetoed = 0;
@@ -280,17 +272,11 @@ function sweepTrades(transactions, myRosterId) {
         if (rid !== myRosterId) withRoster.set(rid, (withRoster.get(rid) || 0) + 1);
       }
     }
-    for (const wb of t.waiver_budget || []) {
-      netFaab.set(wb.sender, (netFaab.get(wb.sender) || 0) - wb.amount);
-      netFaab.set(wb.receiver, (netFaab.get(wb.receiver) || 0) + wb.amount);
-      cashDeals.push({ amount: wb.amount, sender: wb.sender, receiver: wb.receiver, created: t.created });
-    }
   }
-  cashDeals.sort((a, b) => b.amount - a.amount);
   const peak = Math.max(1, ...shapes.values());
   const shapeFit = (send, get) => (shapes.get([send, get].sort((a, b) => b - a).join("-")) || 0) / peak;
   const topShapes = [...shapes.entries()].sort((a, b) => b[1] - a[1]);
-  return { counts, netFaab, withRoster, cashDeals, shapes, shapeFit, topShapes, total, vetoed };
+  return { counts, withRoster, shapes, shapeFit, topShapes, total, vetoed };
 }
 
 function freeAgents(ctx) {
@@ -406,38 +392,25 @@ function tradeBoard(ctx) {
       if (gain <= 0.5) continue;
 
       const targetValue = values.get(target.id)?.value || 0;
-      const need = targetValue * FAIRNESS_FLOOR;
-      const budgetShare = budget ? rival.faabLeft / budget : 1;
-      const cashWelcome = budgetShare <= CASH_BUDGET_SHARE || rival.netFaab >= CASH_SELLER_NET;
 
       let best = null;
       for (const combo of packages) {
         const sent = combo.reduce((sum, p) => sum + surplusValue(p), 0);
-        const shortfall = Math.max(0, need - sent);
-        const cash = cashWelcome && shortfall > 0
-          ? clamp(Math.ceil(shortfall / VALUE_PER_DOLLAR), 0, me.faabLeft)
-          : 0;
-        const paid = sent + cash * VALUE_PER_DOLLAR;
-        const fair = targetValue > 0 ? Math.min(1, paid / targetValue) : 1;
+        const fair = targetValue > 0 ? Math.min(1, sent / targetValue) : 1;
         const shape = ctx.tradeStats.shapeFit(combo.length, 1);
-        const overpay = targetValue > 0 ? Math.min(1, Math.max(0, paid - targetValue) / targetValue) : 0;
+        const overpay = targetValue > 0 ? Math.min(1, Math.max(0, sent - targetValue) / targetValue) : 0;
         const rank = 0.5 * fair + 0.38 * shape - 0.12 * overpay;
-        if (!best || rank > best.rank) best = { combo, sent, cash, paid, fair, shape, rank };
+        if (!best || rank > best.rank) best = { combo, sent, fair, shape, rank };
       }
       if (!best) continue;
 
       const send = best.combo;
-      const cash = best.cash;
-      const paid = best.paid;
       const fairness = best.fair;
       const shapeFit = best.shape;
-      const cashSeller = clamp(rival.netFaab / 81, 0, 1);
-      const lowBudget = clamp(1 - budgetShare, 0, 1);
-      const cashAppetite = cash > 0 ? Math.max(cashSeller, lowBudget) : 0.5;
       const priorMe = Math.min(1, rival.withMe / 3);
 
       const accept =
-        0.25 * rival.tradeRate + 0.12 * priorMe + 0.12 * 1 + 0.16 * cashAppetite + 0.2 * fairness + 0.15 * shapeFit;
+        0.3 * rival.tradeRate + 0.15 * priorMe + 0.13 * 1 + 0.24 * fairness + 0.18 * shapeFit;
 
       offers.push({
         rival,
@@ -445,12 +418,10 @@ function tradeBoard(ctx) {
         targetValue,
         send,
         sentValue: best.sent,
-        cash,
-        paid,
         gain,
         shape: send.length + "-for-1",
         accept: clamp(accept, 0, 0.98),
-        parts: { tradeRate: rival.tradeRate, priorMe, benchFit: 1, cashAppetite, fairness, shapeFit },
+        parts: { tradeRate: rival.tradeRate, priorMe, benchFit: 1, fairness, shapeFit },
       });
     }
   }
@@ -516,17 +487,12 @@ function buildActions(ctx) {
       why:
         esc(offer.target.name) + " sits on their <strong>bench</strong>, outside their own best lineup. " +
         esc(offer.rival.name) + " are " + offer.rival.wins + "–" + offer.rival.losses +
-        " with <strong>" + offer.rival.trades + "</strong> trades on record" +
-        (offer.cash > 0
-          ? offer.rival.netFaab >= CASH_SELLER_NET
-            ? ", and net <strong>+$" + offer.rival.netFaab + " FAAB</strong> received across their trades — they sell players for budget"
-            : ", and down to <strong>$" + offer.rival.faabLeft + "</strong> of FAAB, so cash actually tempts them"
-          : "") +
-        ".",
+        " with <strong>" + offer.rival.trades + "</strong> trades on record, and this is a <strong>" +
+        esc(offer.shape) + "</strong>, the shape this league completes most.",
       gain: offer.gain,
       rank: offer.gain * offer.accept,
       unit: "pts/wk",
-      cost: (giving ? giving : "") + (offer.cash ? (giving ? " + " : "") + "$" + offer.cash : ""),
+      cost: giving || "—",
       cta: null,
     });
   }
@@ -658,9 +624,7 @@ function renderPartners(ctx) {
     .map((t) => {
       const bits = [t.wins + "–" + t.losses];
       if (t.withMe) bits.push("traded with you " + t.withMe + "×");
-      if (t.netFaab > 0) bits.push("sells for cash +$" + t.netFaab);
-      else if (t.netFaab < 0) bits.push("buys with cash −$" + Math.abs(t.netFaab));
-      bits.push("$" + t.faabLeft);
+      bits.push(commas(t.rosterValue) + " value");
       const cold = t.tradeRate < 0.2;
       return (
         '<div class="prow"><div class="prow-main"><div class="prow-name' + (cold ? " dim" : "") + '">' +
@@ -685,9 +649,7 @@ function renderTrades(ctx) {
     "<th class='num'>&Delta;PTS</th><th class='num'>VALUE</th><th class='num'>LIKELY</th></tr></thead>";
   const body = rows
     .map((o, i) => {
-      const giving =
-        o.send.map((p) => esc(p.name)).join(", ") +
-        (o.cash ? (o.send.length ? ' <span class="pos">+$' + o.cash + "</span>" : '<span class="pos">$' + o.cash + "</span>") : "");
+      const giving = o.send.map((p) => esc(p.name)).join(", ");
       return (
         "<tr class='clickable" + (i === SELECTED_TRADE ? " sel" : "") + "' data-i='" + i + "'>" +
         "<td class='dim'>" + (giving || "—") +
@@ -720,7 +682,6 @@ function renderTradeDetail(ctx) {
     return;
   }
   const r = o.rival;
-  const biggestCash = ctx.tradeStats.cashDeals[0];
   const reasons = [];
   reasons.push(
     "<strong>" + esc(r.name) + "</strong> have made <strong>" + r.trades +
@@ -738,21 +699,6 @@ function renderTradeDetail(ctx) {
       (commonest ? ". Their most common shape is " + esc(commonest[0].split("-").join("-for-")) + " (" + commonest[1] + "×)" : "") +
       "."
   );
-  if (o.cash > 0) {
-    const budget = ctx.league.settings?.waiver_budget ?? 0;
-    if (budget && r.faabLeft <= budget * CASH_BUDGET_SHARE)
-      reasons.push(
-        "Cash is in this offer because they are down to <strong class='neg'>$" + r.faabLeft +
-          "</strong> of $" + budget + ". They are effectively locked out of the waiver wire, which is the one situation where FAAB genuinely tempts someone."
-      );
-    else if (r.netFaab >= CASH_SELLER_NET)
-      reasons.push(
-        "Cash is in this offer because their history is net <strong class='pos'>+$" + r.netFaab +
-          " FAAB</strong> received — they have repeatedly sold players for budget."
-      );
-    if (biggestCash)
-      reasons.push("Precedent: the largest cash trade in this league moved <strong>$" + biggestCash.amount + "</strong>, of " + ctx.tradeStats.cashDeals.length + " cash deals in " + ctx.tradeStats.total + " trades.");
-  }
   if (r.withMe) reasons.push("You have traded with them <strong>" + r.withMe + "</strong> time" + (r.withMe === 1 ? "" : "s") + " before.");
   reasons.push(
     "They are " + r.wins + "–" + r.losses + " and " +
@@ -772,9 +718,7 @@ function renderTradeDetail(ctx) {
     '<div class="detail-grid">' +
     '<div class="detail-box"><div class="detail-label">YOU SEND</div><div class="detail-fig">' +
     (o.send.map((p) => esc(p.name)).join(", ") || "—") +
-    (o.cash ? '<span class="pos"> + $' + o.cash + "</span>" : "") +
-    '</div><div class="dim">' + commas(o.paid) + " of value" +
-    (o.cash ? " · " + Math.round((o.cash / Math.max(1, ctx.me.faabLeft)) * 100) + "% of your budget" : "") +
+    '</div><div class="dim">' + commas(o.sentValue) + " of value against " + commas(o.targetValue) +
     '</div></div>' +
     '<div class="detail-box"><div class="detail-label">YOU GET</div><div class="detail-fig">' +
     esc(o.target.name) + '</div><div class="dim">' + esc(o.target.pos) +
@@ -785,7 +729,6 @@ function renderTradeDetail(ctx) {
     '<span class="score-part">activity ' + Math.round(parts.tradeRate * 100) + "%</span>" +
     '<span class="score-part">history ' + Math.round(parts.priorMe * 100) + "%</span>" +
     '<span class="score-part">bench fit ' + Math.round(parts.benchFit * 100) + "%</span>" +
-    '<span class="score-part">cash appetite ' + Math.round(parts.cashAppetite * 100) + "%</span>" +
     '<span class="score-part">fairness ' + Math.round(parts.fairness * 100) + "%</span>" +
     '<span class="score-part">shape ' + Math.round((parts.shapeFit || 0) * 100) + "%</span>" +
     "</div></div></div>" +
@@ -795,7 +738,6 @@ function renderTradeDetail(ctx) {
   $("copyOffer").addEventListener("click", () => {
     const text =
       "Trade offer\n\nYou get: " + o.send.map((p) => p.name + " (" + p.pos + ")").join(", ") +
-      (o.cash ? (o.send.length ? " plus " : "") + "$" + o.cash + " FAAB" : "") +
       "\nI get: " + o.target.name + " (" + o.target.pos + ")";
     navigator.clipboard?.writeText(text).then(
       () => ($("copyOffer").textContent = "Copied"),
@@ -879,7 +821,7 @@ function renderBudget(ctx) {
   const budget = league.settings?.waiver_budget ?? 0;
   const weeksLeft = Math.max(1, (league.settings?.playoff_week_start || 15) - ctx.week);
   const thisWeek = ctx.waivers.slice(0, 3).reduce((s, r) => s + r.bid, 0);
-  const sweetener = ctx.trades.filter((t) => t.cash > 0).slice(0, 2).reduce((s, t) => s + t.cash, 0);
+  const biggest = ctx.waivers.reduce((m, r) => Math.max(m, r.bid), 0);
   const richer = teams.filter((t) => t.rosterId !== me.rosterId && t.faabLeft > me.faabLeft).length;
   const cards = [
     {
@@ -901,11 +843,9 @@ function renderBudget(ctx) {
       tone: "",
     },
     {
-      fig: sweetener ? "$" + sweetener : "—",
-      label: "HOLD FOR TRADES",
-      note: sweetener
-        ? "Cash only moves two managers here. Everyone else wants players."
-        : "No current offer needs cash. Spend it on the wire instead.",
+      fig: biggest ? "$" + biggest : "—",
+      label: "BIGGEST SINGLE CLAIM",
+      note: "The most any one player on the board is worth to you. Trades are players only, so the whole budget belongs to the wire.",
       tone: "",
     },
     {
@@ -951,15 +891,11 @@ function renderLeague(ctx) {
     ctx.tradeStats.total + " trades on record, " + ctx.tradeStats.vetoed + " vetoed";
   const head =
     "<thead><tr><th>#</th><th>TEAM</th><th>W–L</th><th class='num'>PF</th><th class='num'>PA</th>" +
-    "<th class='num'>VALUE</th><th class='num'>RANK</th><th class='num'>FAAB</th><th class='num'>TRADES</th><th>CASH</th></tr></thead>";
+    "<th class='num'>VALUE</th><th class='num'>RANK</th><th class='num'>FAAB</th><th class='num'>TRADES</th></tr></thead>";
   const body = ranked
     .map((t, i) => {
       const mine = t.rosterId === ctx.me.rosterId;
       const cut = i + 1 <= playoffTeams;
-      const cash =
-        t.netFaab > 0 ? '<span class="pos">sells +$' + t.netFaab + "</span>"
-        : t.netFaab < 0 ? '<span class="cau">buys −$' + Math.abs(t.netFaab) + "</span>"
-        : '<span class="dim">—</span>';
       return (
         "<tr class='" + (mine ? "me" : "") + "'><td class='num " + (cut ? "pos" : "dim") + "'>" + (i + 1) +
         "</td><td class='name'>" + esc(t.name) + (mine ? ' <span class="pos">you</span>' : "") +
@@ -969,8 +905,7 @@ function renderLeague(ctx) {
         "</td><td class='num'>" + commas(t.rosterValue) +
         "</td><td class='num dim'>" + valueRank.get(t.rosterId) +
         "</td><td class='num'>$" + t.faabLeft +
-        "</td><td class='num'>" + t.trades +
-        "</td><td>" + cash + "</td></tr>"
+        "</td><td class='num'>" + t.trades + "</td></tr>"
       );
     })
     .join("");
