@@ -1,0 +1,95 @@
+name: build
+
+on:
+  schedule:
+    - cron: "0 10 * * *"   # daily data refresh, no LLM
+    - cron: "0 14 * * 2"   # Tuesday: data + Claude outlooks and briefing
+    - cron: "0 14 * * 6"   # Saturday: data + Claude outlooks and briefing
+  workflow_dispatch:
+    inputs:
+      llm:
+        description: "Run Claude outlooks and the briefing"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths: ["web/**"]
+
+jobs:
+  data:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Run pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          BRIEFING_PASSPHRASE: ${{ secrets.BRIEFING_PASSPHRASE }}
+          LLM: ${{ github.event.schedule == '0 14 * * 2' || github.event.schedule == '0 14 * * 6' || inputs.llm == true }}
+        run: |
+          if [ "$LLM" = "true" ]; then
+            python -m pipeline.run
+          else
+            python -m pipeline.run --no-llm
+          fi
+
+      - name: Commit data
+        run: |
+          git add web/public/data data/history
+          if git diff --cached --quiet; then
+            echo "No data changes"
+            exit 0
+          fi
+          week=$(python -c "import json;print(json.load(open('web/public/data/meta.json'))['week'])")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: $(date -u +%F) wk${week}"
+          git push
+
+  deploy:
+    needs: data
+    if: always() && (needs.data.result == 'success' || needs.data.result == 'skipped')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build
+        working-directory: web
+        run: |
+          npm ci
+          npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/dist
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

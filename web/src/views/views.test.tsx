@@ -67,8 +67,8 @@ describe("views render with fixtures", () => {
     }
   }
 
-  it("Overview shows the briefing placeholder", () => {
-    expect(render(<Overview data={base} />, base)).toContain("Briefing locked");
+  it("Overview shows the briefing panel loading", () => {
+    expect(render(<Overview data={base} />, base)).toContain("Loading briefing");
   });
 
   it("MyTeam flags a benched optimal starter from live data", () => {

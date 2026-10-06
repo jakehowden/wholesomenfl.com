@@ -62,7 +62,7 @@ export function Overview({ data }: { data: PortalData }) {
         )}
       </section>
 
-      <BriefingSlot />
+      <BriefingSlot players={ctx.players} />
     </>
   );
 }
