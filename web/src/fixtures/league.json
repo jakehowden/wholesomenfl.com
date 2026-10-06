@@ -1,0 +1,794 @@
+{
+  "teams": [
+    {
+      "roster_id": 1,
+      "owner": "jsh96",
+      "avatar": null,
+      "wins": 6,
+      "losses": 2,
+      "ties": 0,
+      "pf": 519.46,
+      "pa": 473.98,
+      "all_play_w": 27,
+      "all_play_l": 10,
+      "ros_strength": 137.28,
+      "pos_strength": {
+        "QB": -1.41,
+        "RB": 3.45,
+        "WR": 0.83,
+        "TE": 2.88,
+        "K": -0.86,
+        "DEF": 1.02
+      },
+      "playoff_odds": 0.94,
+      "seed_dist": [
+        0.157,
+        0.032,
+        0.041,
+        0.141,
+        0.098,
+        0.149,
+        0.133,
+        0.141,
+        0.067,
+        0.041
+      ],
+      "proj_wins": 9.83,
+      "faab_left": 91,
+      "roster": [
+        "4984",
+        "4866",
+        "7547",
+        "11604"
+      ]
+    },
+    {
+      "roster_id": 2,
+      "owner": "GridironGuru",
+      "avatar": null,
+      "wins": 3,
+      "losses": 5,
+      "ties": 0,
+      "pf": 549.78,
+      "pa": 583.21,
+      "all_play_w": 13,
+      "all_play_l": 22,
+      "ros_strength": 140.69,
+      "pos_strength": {
+        "QB": 3.86,
+        "RB": -5.16,
+        "WR": 2.37,
+        "TE": 2.04,
+        "K": 0.34,
+        "DEF": -1.44
+      },
+      "playoff_odds": 0.52,
+      "seed_dist": [
+        0.067,
+        0.129,
+        0.157,
+        0.097,
+        0.094,
+        0.127,
+        0.031,
+        0.093,
+        0.06,
+        0.144
+      ],
+      "proj_wins": 8.17,
+      "faab_left": 135,
+      "roster": [
+        "4881",
+        "8138",
+        "11632",
+        "5844"
+      ]
+    },
+    {
+      "roster_id": 3,
+      "owner": "TouchdownTess",
+      "avatar": null,
+      "wins": 6,
+      "losses": 2,
+      "ties": 0,
+      "pf": 491.62,
+      "pa": 498.89,
+      "all_play_w": 26,
+      "all_play_l": 10,
+      "ros_strength": 133.32,
+      "pos_strength": {
+        "QB": 3.77,
+        "RB": -3.82,
+        "WR": 4.91,
+        "TE": -0.27,
+        "K": -0.01,
+        "DEF": 1.27
+      },
+      "playoff_odds": 0.93,
+      "seed_dist": [
+        0.003,
+        0.036,
+        0.23,
+        0.141,
+        0.042,
+        0.158,
+        0.168,
+        0.004,
+        0.148,
+        0.071
+      ],
+      "proj_wins": 10.53,
+      "faab_left": 63,
+      "roster": [
+        "11564",
+        "7564",
+        "9997",
+        "5089"
+      ]
+    },
+    {
+      "roster_id": 4,
+      "owner": "BlitzKing",
+      "avatar": null,
+      "wins": 2,
+      "losses": 6,
+      "ties": 0,
+      "pf": 502.56,
+      "pa": 567.28,
+      "all_play_w": 11,
+      "all_play_l": 26,
+      "ros_strength": 138.79,
+      "pos_strength": {
+        "QB": 1.02,
+        "RB": 4.54,
+        "WR": -4.31,
+        "TE": -0.03,
+        "K": 0.71,
+        "DEF": 0.63
+      },
+      "playoff_odds": 0.42,
+      "seed_dist": [
+        0.183,
+        0.019,
+        0.152,
+        0.073,
+        0.039,
+        0.109,
+        0.102,
+        0.134,
+        0.018,
+        0.17
+      ],
+      "proj_wins": 7.07,
+      "faab_left": 170,
+      "roster": [
+        "6904",
+        "11584",
+        "11628",
+        "BAL"
+      ]
+    },
+    {
+      "roster_id": 5,
+      "owner": "Fumbles4Days",
+      "avatar": null,
+      "wins": 3,
+      "losses": 5,
+      "ties": 0,
+      "pf": 592.5,
+      "pa": 578.39,
+      "all_play_w": 13,
+      "all_play_l": 22,
+      "ros_strength": 124.56,
+      "pos_strength": {
+        "QB": -4.47,
+        "RB": -1.82,
+        "WR": 2.31,
+        "TE": 2.54,
+        "K": -0.95,
+        "DEF": 1.08
+      },
+      "playoff_odds": 0.56,
+      "seed_dist": [
+        0.088,
+        0.046,
+        0.111,
+        0.107,
+        0.102,
+        0.05,
+        0.154,
+        0.164,
+        0.036,
+        0.141
+      ],
+      "proj_wins": 6.67,
+      "faab_left": 46,
+      "roster": [
+        "9758",
+        "6813",
+        "11635"
+      ]
+    },
+    {
+      "roster_id": 6,
+      "owner": "RedZoneRay",
+      "avatar": null,
+      "wins": 4,
+      "losses": 4,
+      "ties": 0,
+      "pf": 594.56,
+      "pa": 567.04,
+      "all_play_w": 19,
+      "all_play_l": 18,
+      "ros_strength": 145.75,
+      "pos_strength": {
+        "QB": -1.28,
+        "RB": -3.62,
+        "WR": -1.7,
+        "TE": -2.72,
+        "K": 0.47,
+        "DEF": 1.5
+      },
+      "playoff_odds": 0.73,
+      "seed_dist": [
+        0.122,
+        0.167,
+        0.001,
+        0.112,
+        0.12,
+        0.086,
+        0.126,
+        0.2,
+        0.065,
+        0.002
+      ],
+      "proj_wins": 7.57,
+      "faab_left": 112,
+      "roster": [
+        "11560",
+        "12527",
+        "9500"
+      ]
+    },
+    {
+      "roster_id": 7,
+      "owner": "HailMaryHank",
+      "avatar": null,
+      "wins": 0,
+      "losses": 8,
+      "ties": 0,
+      "pf": 588.39,
+      "pa": 534.26,
+      "all_play_w": 4,
+      "all_play_l": 34,
+      "ros_strength": 118.8,
+      "pos_strength": {
+        "QB": 2.99,
+        "RB": 2,
+        "WR": 2.69,
+        "TE": -2.99,
+        "K": -0.32,
+        "DEF": 0.75
+      },
+      "playoff_odds": 0.2,
+      "seed_dist": [
+        0.135,
+        0.092,
+        0.048,
+        0.188,
+        0.179,
+        0.096,
+        0.007,
+        0.14,
+        0.055,
+        0.06
+      ],
+      "proj_wins": 7.74,
+      "faab_left": 61,
+      "roster": [
+        "7523",
+        "9221",
+        "8167"
+      ]
+    },
+    {
+      "roster_id": 8,
+      "owner": "PuntReturnPat",
+      "avatar": null,
+      "wins": 3,
+      "losses": 5,
+      "ties": 0,
+      "pf": 487.6,
+      "pa": 567.15,
+      "all_play_w": 13,
+      "all_play_l": 22,
+      "ros_strength": 128.35,
+      "pos_strength": {
+        "QB": -1.15,
+        "RB": -3.97,
+        "WR": -3.6,
+        "TE": -1.35,
+        "K": 0.93,
+        "DEF": 1.44
+      },
+      "playoff_odds": 0.52,
+      "seed_dist": [
+        0.077,
+        0.004,
+        0.049,
+        0.15,
+        0.194,
+        0.023,
+        0.21,
+        0.109,
+        0.071,
+        0.112
+      ],
+      "proj_wins": 8.35,
+      "faab_left": 130,
+      "roster": [
+        "4046",
+        "9488",
+        "10229"
+      ]
+    },
+    {
+      "roster_id": 9,
+      "owner": "SackMaster",
+      "avatar": null,
+      "wins": 5,
+      "losses": 3,
+      "ties": 0,
+      "pf": 571.48,
+      "pa": 507.47,
+      "all_play_w": 21,
+      "all_play_l": 14,
+      "ros_strength": 141.13,
+      "pos_strength": {
+        "QB": 5.34,
+        "RB": 4.16,
+        "WR": 4.69,
+        "TE": 2.34,
+        "K": -0.35,
+        "DEF": -0.25
+      },
+      "playoff_odds": 0.76,
+      "seed_dist": [
+        0.108,
+        0.103,
+        0.014,
+        0.158,
+        0.132,
+        0.047,
+        0.136,
+        0.161,
+        0.018,
+        0.123
+      ],
+      "proj_wins": 8.78,
+      "faab_left": 52,
+      "roster": [
+        "9509",
+        "8146",
+        "9504"
+      ]
+    },
+    {
+      "roster_id": 10,
+      "owner": "WaiverWendy",
+      "avatar": null,
+      "wins": 2,
+      "losses": 6,
+      "ties": 0,
+      "pf": 458.47,
+      "pa": 595.89,
+      "all_play_w": 12,
+      "all_play_l": 26,
+      "ros_strength": 142.32,
+      "pos_strength": {
+        "QB": -3.77,
+        "RB": 5.59,
+        "WR": -0.72,
+        "TE": -0.12,
+        "K": 0.29,
+        "DEF": -0.7
+      },
+      "playoff_odds": 0.49,
+      "seed_dist": [
+        0.002,
+        0.158,
+        0.136,
+        0.14,
+        0.149,
+        0.053,
+        0.105,
+        0.095,
+        0.131,
+        0.033
+      ],
+      "proj_wins": 6.67,
+      "faab_left": 43,
+      "roster": [
+        "9226",
+        "9493",
+        "10859"
+      ]
+    }
+  ],
+  "schedule": [
+    {
+      "week": 5,
+      "matchups": [
+        [
+          1,
+          6
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          10,
+          2
+        ]
+      ]
+    },
+    {
+      "week": 6,
+      "matchups": [
+        [
+          1,
+          7
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    },
+    {
+      "week": 7,
+      "matchups": [
+        [
+          1,
+          8
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ]
+    },
+    {
+      "week": 8,
+      "matchups": [
+        [
+          1,
+          9
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ]
+    },
+    {
+      "week": 9,
+      "matchups": [
+        [
+          1,
+          10
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          6
+        ]
+      ]
+    },
+    {
+      "week": 10,
+      "matchups": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          7
+        ]
+      ]
+    },
+    {
+      "week": 11,
+      "matchups": [
+        [
+          1,
+          3
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          8
+        ]
+      ]
+    },
+    {
+      "week": 12,
+      "matchups": [
+        [
+          1,
+          4
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          9
+        ]
+      ]
+    },
+    {
+      "week": 13,
+      "matchups": [
+        [
+          1,
+          5
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          9,
+          10
+        ]
+      ]
+    },
+    {
+      "week": 14,
+      "matchups": [
+        [
+          1,
+          6
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          10,
+          2
+        ]
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1180000000000000001",
+      "type": "trade",
+      "week": 3,
+      "status": "complete",
+      "sides": [
+        {
+          "roster_id": 1,
+          "adds": [
+            "9997"
+          ],
+          "drops": [
+            "8138"
+          ],
+          "ros_delta": -4.2
+        },
+        {
+          "roster_id": 2,
+          "adds": [
+            "8138"
+          ],
+          "drops": [
+            "9997"
+          ],
+          "ros_delta": 4.2
+        }
+      ],
+      "grade": "C/B",
+      "faab": null
+    },
+    {
+      "id": "1180000000000000002",
+      "type": "waiver",
+      "week": 4,
+      "status": "complete",
+      "sides": [
+        {
+          "roster_id": 4,
+          "adds": [
+            "11584"
+          ],
+          "drops": [],
+          "ros_delta": 11.6
+        }
+      ],
+      "grade": null,
+      "faab": 37
+    },
+    {
+      "id": "1180000000000000003",
+      "type": "free_agent",
+      "week": 4,
+      "status": "complete",
+      "sides": [
+        {
+          "roster_id": 7,
+          "adds": [
+            "11789"
+          ],
+          "drops": [
+            "5089"
+          ],
+          "ros_delta": -1.1
+        }
+      ],
+      "grade": null,
+      "faab": null
+    },
+    {
+      "id": "1180000000000000004",
+      "type": "trade",
+      "week": 4,
+      "status": "complete",
+      "sides": [
+        {
+          "roster_id": 3,
+          "adds": [
+            "9493",
+            "5844"
+          ],
+          "drops": [
+            "4881"
+          ],
+          "ros_delta": 6.8
+        },
+        {
+          "roster_id": 6,
+          "adds": [
+            "4881"
+          ],
+          "drops": [
+            "9493",
+            "5844"
+          ],
+          "ros_delta": -6.8
+        }
+      ],
+      "grade": "A/D",
+      "faab": null
+    },
+    {
+      "id": "1180000000000000005",
+      "type": "waiver",
+      "week": 5,
+      "status": "failed",
+      "sides": [
+        {
+          "roster_id": 9,
+          "adds": [
+            "11638"
+          ],
+          "drops": [],
+          "ros_delta": 3.4
+        }
+      ],
+      "grade": null,
+      "faab": 12
+    }
+  ],
+  "sim": {
+    "runs": 10000,
+    "sd": 18.5
+  }
+}
