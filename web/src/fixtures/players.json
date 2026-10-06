@@ -1,0 +1,4263 @@
+[
+  {
+    "id": "4984",
+    "name": "Josh Allen",
+    "pos": "QB",
+    "team": "BUF",
+    "bye": 7,
+    "injury": null,
+    "roster_id": 1,
+    "proj": {
+      "5": 22.09,
+      "6": 27.63,
+      "7": 0,
+      "8": 23.83,
+      "9": 23.36,
+      "10": 26.48,
+      "11": 25.3,
+      "12": 24.07,
+      "13": 26.62,
+      "14": 26.64,
+      "15": 25.36,
+      "16": 26.21,
+      "17": 25.92
+    },
+    "ros": 121.11,
+    "ros_playoff": 47.84,
+    "ros_rank": 4,
+    "ros_pos_rank": 1,
+    "repl": 15.2,
+    "season": {
+      "games": 4,
+      "pts": 109.94,
+      "ppg": 27.49,
+      "xfp": 95.22,
+      "xfp_pg": 23.81
+    },
+    "signals": {
+      "usage_trend": 0.62,
+      "usage_metric": "rush_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.15
+        },
+        {
+          "week": 2,
+          "value": 0.06
+        },
+        {
+          "week": 3,
+          "value": 0.15
+        },
+        {
+          "week": 4,
+          "value": 0.12
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.95
+        },
+        {
+          "week": 2,
+          "value": 0.9
+        },
+        {
+          "week": 3,
+          "value": 0.6
+        },
+        {
+          "week": 4,
+          "value": 0.77
+        }
+      ],
+      "luck": 14.72,
+      "market_drift": 4.23,
+      "fc_value": 10879,
+      "fc_rank": 1,
+      "market_gap": -3,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 10241
+        },
+        {
+          "date": "2026-09-15",
+          "value": 10429
+        },
+        {
+          "date": "2026-09-22",
+          "value": 10603
+        },
+        {
+          "date": "2026-09-29",
+          "value": 11039
+        },
+        {
+          "date": "2026-10-06",
+          "value": 11254
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "4881",
+    "name": "Lamar Jackson",
+    "pos": "QB",
+    "team": "BAL",
+    "bye": 7,
+    "injury": null,
+    "roster_id": 2,
+    "proj": {
+      "5": 23.85,
+      "6": 23.63,
+      "7": 0,
+      "8": 26.59,
+      "9": 23.61,
+      "10": 22.55,
+      "11": 23.41,
+      "12": 24.18,
+      "13": 23.39,
+      "14": 27.18,
+      "15": 24.94,
+      "16": 25.95,
+      "17": 26.83
+    },
+    "ros": 113.71,
+    "ros_playoff": 48.18,
+    "ros_rank": 6,
+    "ros_pos_rank": 2,
+    "repl": 15.2,
+    "season": {
+      "games": 4,
+      "pts": 85.37,
+      "ppg": 21.34,
+      "xfp": 93.94,
+      "xfp_pg": 23.49
+    },
+    "signals": {
+      "usage_trend": 0.03,
+      "usage_metric": "rush_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.11
+        },
+        {
+          "week": 2,
+          "value": 0.08
+        },
+        {
+          "week": 3,
+          "value": 0.19
+        },
+        {
+          "week": 4,
+          "value": 0.06
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.71
+        },
+        {
+          "week": 2,
+          "value": 0.7
+        },
+        {
+          "week": 3,
+          "value": 0.84
+        },
+        {
+          "week": 4,
+          "value": 0.95
+        }
+      ],
+      "luck": -8.57,
+      "market_drift": 0.15,
+      "fc_value": 10837,
+      "fc_rank": 2,
+      "market_gap": -4,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 9861
+        },
+        {
+          "date": "2026-09-15",
+          "value": 10234
+        },
+        {
+          "date": "2026-09-22",
+          "value": 10371
+        },
+        {
+          "date": "2026-09-29",
+          "value": 10640
+        },
+        {
+          "date": "2026-10-06",
+          "value": 10896
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "11564",
+    "name": "Jayden Daniels",
+    "pos": "QB",
+    "team": "WAS",
+    "bye": 12,
+    "injury": null,
+    "roster_id": 3,
+    "proj": {
+      "5": 22.27,
+      "6": 23.38,
+      "7": 23.83,
+      "8": 21.71,
+      "9": 25.46,
+      "10": 22.97,
+      "11": 25.22,
+      "12": 0,
+      "13": 23.95,
+      "14": 23.95,
+      "15": 23.29,
+      "16": 23.23,
+      "17": 24.25
+    },
+    "ros": 101.11,
+    "ros_playoff": 37.76,
+    "ros_rank": 9,
+    "ros_pos_rank": 3,
+    "repl": 15.2,
+    "season": {
+      "games": 4,
+      "pts": 105.04,
+      "ppg": 26.26,
+      "xfp": 90.88,
+      "xfp_pg": 22.72
+    },
+    "signals": {
+      "usage_trend": -0.75,
+      "usage_metric": "rush_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.14
+        },
+        {
+          "week": 2,
+          "value": 0.1
+        },
+        {
+          "week": 3,
+          "value": 0.1
+        },
+        {
+          "week": 4,
+          "value": 0.11
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.89
+        },
+        {
+          "week": 2,
+          "value": 0.93
+        },
+        {
+          "week": 3,
+          "value": 0.6
+        },
+        {
+          "week": 4,
+          "value": 0.9
+        }
+      ],
+      "luck": 14.16,
+      "market_drift": -4.22,
+      "fc_value": 10381,
+      "fc_rank": 3,
+      "market_gap": -6,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 9596
+        },
+        {
+          "date": "2026-09-15",
+          "value": 9646
+        },
+        {
+          "date": "2026-09-22",
+          "value": 9807
+        },
+        {
+          "date": "2026-09-29",
+          "value": 10586
+        },
+        {
+          "date": "2026-10-06",
+          "value": 10310
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "6904",
+    "name": "Jalen Hurts",
+    "pos": "QB",
+    "team": "PHI",
+    "bye": 9,
+    "injury": null,
+    "roster_id": 4,
+    "proj": {
+      "5": 23.11,
+      "6": 20.49,
+      "7": 22.17,
+      "8": 22.9,
+      "9": 0,
+      "10": 20.45,
+      "11": 24.67,
+      "12": 24.47,
+      "13": 24.5,
+      "14": 24.47,
+      "15": 24.59,
+      "16": 23.8,
+      "17": 21.19
+    },
+    "ros": 94.41,
+    "ros_playoff": 35.97,
+    "ros_rank": 11,
+    "ros_pos_rank": 4,
+    "repl": 15.2,
+    "season": {
+      "games": 4,
+      "pts": 76.44,
+      "ppg": 19.11,
+      "xfp": 85.09,
+      "xfp_pg": 21.27
+    },
+    "signals": {
+      "usage_trend": -1.5,
+      "usage_metric": "rush_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.14
+        },
+        {
+          "week": 2,
+          "value": 0.08
+        },
+        {
+          "week": 3,
+          "value": 0.16
+        },
+        {
+          "week": 4,
+          "value": 0.12
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.85
+        },
+        {
+          "week": 2,
+          "value": 0.65
+        },
+        {
+          "week": 3,
+          "value": 0.93
+        },
+        {
+          "week": 4,
+          "value": 0.65
+        }
+      ],
+      "luck": -8.65,
+      "market_drift": -1.26,
+      "fc_value": 9476,
+      "fc_rank": 5,
+      "market_gap": -6,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 9037
+        },
+        {
+          "date": "2026-09-15",
+          "value": 8785
+        },
+        {
+          "date": "2026-09-22",
+          "value": 9186
+        },
+        {
+          "date": "2026-09-29",
+          "value": 9099
+        },
+        {
+          "date": "2026-10-06",
+          "value": 9806
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "9758",
+    "name": "C.J. Stroud",
+    "pos": "QB",
+    "team": "HOU",
+    "bye": 6,
+    "injury": null,
+    "roster_id": 5,
+    "proj": {
+      "5": 20.45,
+      "6": 0,
+      "7": 21.81,
+      "8": 17.52,
+      "9": 21.7,
+      "10": 18.32,
+      "11": 22.03,
+      "12": 20.11,
+      "13": 20.65,
+      "14": 18.69,
+      "15": 18.48,
+      "16": 18.42,
+      "17": 20.11
+    },
+    "ros": 55.89,
+    "ros_playoff": 17.12,
+    "ros_rank": 22,
+    "ros_pos_rank": 6,
+    "repl": 15.2,
+    "season": {
+      "games": 4,
+      "pts": 68.56,
+      "ppg": 17.14,
+      "xfp": 83.47,
+      "xfp_pg": 20.87
+    },
+    "signals": {
+      "usage_trend": 0.64,
+      "usage_metric": "rush_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.12
+        },
+        {
+          "week": 2,
+          "value": 0.05
+        },
+        {
+          "week": 3,
+          "value": 0.07
+        },
+        {
+          "week": 4,
+          "value": 0.19
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.61
+        },
+        {
+          "week": 2,
+          "value": 0.85
+        },
+        {
+          "week": 3,
+          "value": 0.93
+        },
+        {
+          "week": 4,
+          "value": 0.57
+        }
+      ],
+      "luck": -14.91,
+      "market_drift": 3.83,
+      "fc_value": 8947,
+      "fc_rank": 7,
+      "market_gap": -15,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 8515
+        },
+        {
+          "date": "2026-09-15",
+          "value": 8764
+        },
+        {
+          "date": "2026-09-22",
+          "value": 8922
+        },
+        {
+          "date": "2026-09-29",
+          "value": 9000
+        },
+        {
+          "date": "2026-10-06",
+          "value": 8993
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "BUY",
+    "tag_reasons": [
+      "Usage rising over the last 3 weeks",
+      "Scoring below expected fantasy points"
+    ]
+  },
+  {
+    "id": "11560",
+    "name": "Bo Nix",
+    "pos": "QB",
+    "team": "DEN",
+    "bye": 12,
+    "injury": null,
+    "roster_id": 6,
+    "proj": {
+      "5": 17.95,
+      "6": 20.14,
+      "7": 20.85,
+      "8": 18.63,
+      "9": 17.88,
+      "10": 18.66,
+      "11": 20.87,
+      "12": 0,
+      "13": 19.37,
+      "14": 18.42,
+      "15": 19.66,
+      "16": 20.18,
+      "17": 18.34
+    },
+    "ros": 48.55,
+    "ros_playoff": 18.87,
+    "ros_rank": 26,
+    "ros_pos_rank": 7,
+    "repl": 15.2,
+    "season": {
+      "games": 4,
+      "pts": 81.56,
+      "ppg": 20.39,
+      "xfp": 75.22,
+      "xfp_pg": 18.81
+    },
+    "signals": {
+      "usage_trend": -0.56,
+      "usage_metric": "rush_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.2
+        },
+        {
+          "week": 2,
+          "value": 0.2
+        },
+        {
+          "week": 3,
+          "value": 0.14
+        },
+        {
+          "week": 4,
+          "value": 0.18
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.94
+        },
+        {
+          "week": 2,
+          "value": 0.64
+        },
+        {
+          "week": 3,
+          "value": 0.83
+        },
+        {
+          "week": 4,
+          "value": 0.61
+        }
+      ],
+      "luck": 6.34,
+      "market_drift": -0.03,
+      "fc_value": 8201,
+      "fc_rank": 11,
+      "market_gap": -15,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 7655
+        },
+        {
+          "date": "2026-09-15",
+          "value": 7924
+        },
+        {
+          "date": "2026-09-22",
+          "value": 8174
+        },
+        {
+          "date": "2026-09-29",
+          "value": 8110
+        },
+        {
+          "date": "2026-10-06",
+          "value": 8129
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "7523",
+    "name": "Trevor Lawrence",
+    "pos": "QB",
+    "team": "JAX",
+    "bye": 8,
+    "injury": "Questionable",
+    "roster_id": 7,
+    "proj": {
+      "5": 16.68,
+      "6": 15.55,
+      "7": 17.56,
+      "8": 0,
+      "9": 16.99,
+      "10": 17.15,
+      "11": 16.93,
+      "12": 17.94,
+      "13": 16.34,
+      "14": 17.92,
+      "15": 14.98,
+      "16": 16.08,
+      "17": 17.07
+    },
+    "ros": 19.01,
+    "ros_playoff": 4.13,
+    "ros_rank": 36,
+    "ros_pos_rank": 8,
+    "repl": 15.2,
+    "season": {
+      "games": 4,
+      "pts": 61.57,
+      "ppg": 15.39,
+      "xfp": 70.61,
+      "xfp_pg": 17.65
+    },
+    "signals": {
+      "usage_trend": -0.79,
+      "usage_metric": "rush_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.15
+        },
+        {
+          "week": 2,
+          "value": 0.11
+        },
+        {
+          "week": 3,
+          "value": 0.06
+        },
+        {
+          "week": 4,
+          "value": 0.17
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.9
+        },
+        {
+          "week": 2,
+          "value": 0.94
+        },
+        {
+          "week": 3,
+          "value": 0.94
+        },
+        {
+          "week": 4,
+          "value": 0.84
+        }
+      ],
+      "luck": -9.04,
+      "market_drift": 4.59,
+      "fc_value": 7360,
+      "fc_rank": 14,
+      "market_gap": -22,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 6635
+        },
+        {
+          "date": "2026-09-15",
+          "value": 7108
+        },
+        {
+          "date": "2026-09-22",
+          "value": 7184
+        },
+        {
+          "date": "2026-09-29",
+          "value": 7385
+        },
+        {
+          "date": "2026-10-06",
+          "value": 7609
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "4046",
+    "name": "Patrick Mahomes",
+    "pos": "QB",
+    "team": "KC",
+    "bye": 10,
+    "injury": null,
+    "roster_id": 8,
+    "proj": {
+      "5": 19.29,
+      "6": 19.8,
+      "7": 19.51,
+      "8": 19.66,
+      "9": 19.54,
+      "10": 0,
+      "11": 19.15,
+      "12": 22.25,
+      "13": 24.02,
+      "14": 20.1,
+      "15": 19.79,
+      "16": 20.15,
+      "17": 22.61
+    },
+    "ros": 63.47,
+    "ros_playoff": 25.42,
+    "ros_rank": 19,
+    "ros_pos_rank": 5,
+    "repl": 15.2,
+    "season": {
+      "games": 4,
+      "pts": 80.11,
+      "ppg": 20.03,
+      "xfp": 86.04,
+      "xfp_pg": 21.51
+    },
+    "signals": {
+      "usage_trend": -0.23,
+      "usage_metric": "rush_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.15
+        },
+        {
+          "week": 2,
+          "value": 0.17
+        },
+        {
+          "week": 3,
+          "value": 0.11
+        },
+        {
+          "week": 4,
+          "value": 0.11
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.58
+        },
+        {
+          "week": 2,
+          "value": 0.65
+        },
+        {
+          "week": 3,
+          "value": 0.9
+        },
+        {
+          "week": 4,
+          "value": 0.97
+        }
+      ],
+      "luck": -5.93,
+      "market_drift": -3.48,
+      "fc_value": 10009,
+      "fc_rank": 4,
+      "market_gap": -15,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 9564
+        },
+        {
+          "date": "2026-09-15",
+          "value": 9514
+        },
+        {
+          "date": "2026-09-22",
+          "value": 9482
+        },
+        {
+          "date": "2026-09-29",
+          "value": 9735
+        },
+        {
+          "date": "2026-10-06",
+          "value": 10171
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "9509",
+    "name": "Bijan Robinson",
+    "pos": "RB",
+    "team": "ATL",
+    "bye": 5,
+    "injury": null,
+    "roster_id": 9,
+    "proj": {
+      "5": 0,
+      "6": 17.87,
+      "7": 17.44,
+      "8": 18.34,
+      "9": 20.08,
+      "10": 19.66,
+      "11": 19.31,
+      "12": 21.7,
+      "13": 17.42,
+      "14": 19,
+      "15": 18.54,
+      "16": 17.09,
+      "17": 17.1
+    },
+    "ros": 122.75,
+    "ros_playoff": 41.3,
+    "ros_rank": 3,
+    "ros_pos_rank": 2,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 75.59,
+      "ppg": 18.9,
+      "xfp": 71.26,
+      "xfp_pg": 17.82
+    },
+    "signals": {
+      "usage_trend": 1.27,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.28
+        },
+        {
+          "week": 2,
+          "value": 0.27
+        },
+        {
+          "week": 3,
+          "value": 0.21
+        },
+        {
+          "week": 4,
+          "value": 0.29
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.96
+        },
+        {
+          "week": 2,
+          "value": 0.89
+        },
+        {
+          "week": 3,
+          "value": 0.83
+        },
+        {
+          "week": 4,
+          "value": 0.8
+        }
+      ],
+      "luck": 4.33,
+      "market_drift": -1.52,
+      "fc_value": 8359,
+      "fc_rank": 9,
+      "market_gap": 6,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 7727
+        },
+        {
+          "date": "2026-09-15",
+          "value": 7940
+        },
+        {
+          "date": "2026-09-22",
+          "value": 8106
+        },
+        {
+          "date": "2026-09-29",
+          "value": 8309
+        },
+        {
+          "date": "2026-10-06",
+          "value": 8554
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "9226",
+    "name": "Jahmyr Gibbs",
+    "pos": "RB",
+    "team": "DET",
+    "bye": 8,
+    "injury": null,
+    "roster_id": 10,
+    "proj": {
+      "5": 19.55,
+      "6": 19.4,
+      "7": 19.83,
+      "8": 0,
+      "9": 20.53,
+      "10": 20.36,
+      "11": 21,
+      "12": 18.52,
+      "13": 18.74,
+      "14": 20.86,
+      "15": 20.94,
+      "16": 18.16,
+      "17": 16.9
+    },
+    "ros": 133.99,
+    "ros_playoff": 46.2,
+    "ros_rank": 2,
+    "ros_pos_rank": 1,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 71.65,
+      "ppg": 17.91,
+      "xfp": 80.96,
+      "xfp_pg": 20.24
+    },
+    "signals": {
+      "usage_trend": 0.71,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.31
+        },
+        {
+          "week": 2,
+          "value": 0.28
+        },
+        {
+          "week": 3,
+          "value": 0.16
+        },
+        {
+          "week": 4,
+          "value": 0.17
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.89
+        },
+        {
+          "week": 2,
+          "value": 0.59
+        },
+        {
+          "week": 3,
+          "value": 0.94
+        },
+        {
+          "week": 4,
+          "value": 0.89
+        }
+      ],
+      "luck": -9.31,
+      "market_drift": 1.35,
+      "fc_value": 8534,
+      "fc_rank": 8,
+      "market_gap": 6,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 8045
+        },
+        {
+          "date": "2026-09-15",
+          "value": 8126
+        },
+        {
+          "date": "2026-09-22",
+          "value": 8249
+        },
+        {
+          "date": "2026-09-29",
+          "value": 8639
+        },
+        {
+          "date": "2026-10-06",
+          "value": 8652
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "BUY",
+    "tag_reasons": [
+      "Usage rising over the last 3 weeks",
+      "Scoring below expected fantasy points"
+    ]
+  },
+  {
+    "id": "4866",
+    "name": "Saquon Barkley",
+    "pos": "RB",
+    "team": "PHI",
+    "bye": 9,
+    "injury": null,
+    "roster_id": 1,
+    "proj": {
+      "5": 19.72,
+      "6": 17.1,
+      "7": 18.91,
+      "8": 17.81,
+      "9": 0,
+      "10": 17.64,
+      "11": 16.74,
+      "12": 18.49,
+      "13": 16.93,
+      "14": 19.83,
+      "15": 19.5,
+      "16": 17.4,
+      "17": 18.89
+    },
+    "ros": 118.16,
+    "ros_playoff": 45.88,
+    "ros_rank": 5,
+    "ros_pos_rank": 3,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 80.6,
+      "ppg": 20.15,
+      "xfp": 66.84,
+      "xfp_pg": 16.71
+    },
+    "signals": {
+      "usage_trend": 1.26,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.12
+        },
+        {
+          "week": 2,
+          "value": 0.15
+        },
+        {
+          "week": 3,
+          "value": 0.2
+        },
+        {
+          "week": 4,
+          "value": 0.12
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.85
+        },
+        {
+          "week": 2,
+          "value": 0.94
+        },
+        {
+          "week": 3,
+          "value": 0.62
+        },
+        {
+          "week": 4,
+          "value": 0.64
+        }
+      ],
+      "luck": 13.76,
+      "market_drift": 4.47,
+      "fc_value": 7879,
+      "fc_rank": 13,
+      "market_gap": 8,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 7422
+        },
+        {
+          "date": "2026-09-15",
+          "value": 7331
+        },
+        {
+          "date": "2026-09-22",
+          "value": 7461
+        },
+        {
+          "date": "2026-09-29",
+          "value": 7860
+        },
+        {
+          "date": "2026-10-06",
+          "value": 7729
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "8138",
+    "name": "Breece Hall",
+    "pos": "RB",
+    "team": "NYJ",
+    "bye": 9,
+    "injury": null,
+    "roster_id": 2,
+    "proj": {
+      "5": 15.26,
+      "6": 14.51,
+      "7": 15.06,
+      "8": 12.93,
+      "9": 0,
+      "10": 13.62,
+      "11": 14.93,
+      "12": 15.75,
+      "13": 14.36,
+      "14": 14.5,
+      "15": 15.15,
+      "16": 14.89,
+      "17": 15
+    },
+    "ros": 75.16,
+    "ros_playoff": 29.76,
+    "ros_rank": 18,
+    "ros_pos_rank": 7,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 58.46,
+      "ppg": 14.62,
+      "xfp": 52.26,
+      "xfp_pg": 13.07
+    },
+    "signals": {
+      "usage_trend": 0.34,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.16
+        },
+        {
+          "week": 2,
+          "value": 0.24
+        },
+        {
+          "week": 3,
+          "value": 0.17
+        },
+        {
+          "week": 4,
+          "value": 0.16
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.82
+        },
+        {
+          "week": 2,
+          "value": 0.82
+        },
+        {
+          "week": 3,
+          "value": 0.9
+        },
+        {
+          "week": 4,
+          "value": 0.65
+        }
+      ],
+      "luck": 6.2,
+      "market_drift": 4.06,
+      "fc_value": 6005,
+      "fc_rank": 26,
+      "market_gap": 8,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5424
+        },
+        {
+          "date": "2026-09-15",
+          "value": 5773
+        },
+        {
+          "date": "2026-09-22",
+          "value": 5791
+        },
+        {
+          "date": "2026-09-29",
+          "value": 6050
+        },
+        {
+          "date": "2026-10-06",
+          "value": 6123
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "7564",
+    "name": "De'Von Achane",
+    "pos": "RB",
+    "team": "MIA",
+    "bye": 12,
+    "injury": "Questionable",
+    "roster_id": 3,
+    "proj": {
+      "5": 17.49,
+      "6": 14.75,
+      "7": 17.94,
+      "8": 16.3,
+      "9": 17.56,
+      "10": 16.01,
+      "11": 17.73,
+      "12": 0,
+      "13": 17.44,
+      "14": 17.19,
+      "15": 17.9,
+      "16": 17.7,
+      "17": 15.09
+    },
+    "ros": 102.3,
+    "ros_playoff": 38.24,
+    "ros_rank": 7,
+    "ros_pos_rank": 4,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 69.5,
+      "ppg": 17.38,
+      "xfp": 60.7,
+      "xfp_pg": 15.18
+    },
+    "signals": {
+      "usage_trend": 1.35,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.31
+        },
+        {
+          "week": 2,
+          "value": 0.13
+        },
+        {
+          "week": 3,
+          "value": 0.14
+        },
+        {
+          "week": 4,
+          "value": 0.17
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.95
+        },
+        {
+          "week": 2,
+          "value": 0.92
+        },
+        {
+          "week": 3,
+          "value": 0.96
+        },
+        {
+          "week": 4,
+          "value": 0.67
+        }
+      ],
+      "luck": 8.8,
+      "market_drift": -3.02,
+      "fc_value": 6959,
+      "fc_rank": 18,
+      "market_gap": 11,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 6276
+        },
+        {
+          "date": "2026-09-15",
+          "value": 6598
+        },
+        {
+          "date": "2026-09-22",
+          "value": 6775
+        },
+        {
+          "date": "2026-09-29",
+          "value": 6740
+        },
+        {
+          "date": "2026-10-06",
+          "value": 6955
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "11584",
+    "name": "Bucky Irving",
+    "pos": "RB",
+    "team": "TB",
+    "bye": 9,
+    "injury": null,
+    "roster_id": 4,
+    "proj": {
+      "5": 13.34,
+      "6": 12.52,
+      "7": 11.97,
+      "8": 11.93,
+      "9": 0,
+      "10": 12.09,
+      "11": 13.82,
+      "12": 13.3,
+      "13": 14.39,
+      "14": 14.13,
+      "15": 13.43,
+      "16": 14.04,
+      "17": 13.04
+    },
+    "ros": 57.2,
+    "ros_playoff": 22.96,
+    "ros_rank": 21,
+    "ros_pos_rank": 8,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 55.42,
+      "ppg": 13.86,
+      "xfp": 58.59,
+      "xfp_pg": 14.65
+    },
+    "signals": {
+      "usage_trend": 1.39,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.26
+        },
+        {
+          "week": 2,
+          "value": 0.24
+        },
+        {
+          "week": 3,
+          "value": 0.28
+        },
+        {
+          "week": 4,
+          "value": 0.15
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.58
+        },
+        {
+          "week": 2,
+          "value": 0.86
+        },
+        {
+          "week": 3,
+          "value": 0.83
+        },
+        {
+          "week": 4,
+          "value": 0.74
+        }
+      ],
+      "luck": -3.17,
+      "market_drift": 0.45,
+      "fc_value": 6322,
+      "fc_rank": 22,
+      "market_gap": 1,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5837
+        },
+        {
+          "date": "2026-09-15",
+          "value": 6004
+        },
+        {
+          "date": "2026-09-22",
+          "value": 5989
+        },
+        {
+          "date": "2026-09-29",
+          "value": 6094
+        },
+        {
+          "date": "2026-10-06",
+          "value": 6226
+        }
+      ],
+      "breakout": "Snap share up 3 straight weeks and passing-down role growing"
+    },
+    "tag": "BUY",
+    "tag_reasons": [
+      "Usage rising over the last 3 weeks",
+      "Scoring below expected fantasy points"
+    ]
+  },
+  {
+    "id": "6813",
+    "name": "Jonathan Taylor",
+    "pos": "RB",
+    "team": "IND",
+    "bye": 11,
+    "injury": null,
+    "roster_id": 5,
+    "proj": {
+      "5": 15.15,
+      "6": 15.11,
+      "7": 14.57,
+      "8": 16.23,
+      "9": 14.29,
+      "10": 14.01,
+      "11": 0,
+      "12": 13.82,
+      "13": 16.97,
+      "14": 17.09,
+      "15": 13.98,
+      "16": 16.71,
+      "17": 15.02
+    },
+    "ros": 82.15,
+    "ros_playoff": 30.77,
+    "ros_rank": 17,
+    "ros_pos_rank": 6,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 60.96,
+      "ppg": 15.24,
+      "xfp": 67.93,
+      "xfp_pg": 16.98
+    },
+    "signals": {
+      "usage_trend": -1.47,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.32
+        },
+        {
+          "week": 2,
+          "value": 0.16
+        },
+        {
+          "week": 3,
+          "value": 0.25
+        },
+        {
+          "week": 4,
+          "value": 0.21
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.56
+        },
+        {
+          "week": 2,
+          "value": 0.62
+        },
+        {
+          "week": 3,
+          "value": 0.87
+        },
+        {
+          "week": 4,
+          "value": 0.87
+        }
+      ],
+      "luck": -6.97,
+      "market_drift": -2.51,
+      "fc_value": 7311,
+      "fc_rank": 15,
+      "market_gap": -2,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 6956
+        },
+        {
+          "date": "2026-09-15",
+          "value": 7083
+        },
+        {
+          "date": "2026-09-22",
+          "value": 7012
+        },
+        {
+          "date": "2026-09-29",
+          "value": 7220
+        },
+        {
+          "date": "2026-10-06",
+          "value": 7296
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "12527",
+    "name": "Ashton Jeanty",
+    "pos": "RB",
+    "team": "LV",
+    "bye": 8,
+    "injury": null,
+    "roster_id": 6,
+    "proj": {
+      "5": 14.02,
+      "6": 16.26,
+      "7": 16.22,
+      "8": 0,
+      "9": 15.54,
+      "10": 14.89,
+      "11": 16.21,
+      "12": 16.04,
+      "13": 16.02,
+      "14": 15.83,
+      "15": 16.58,
+      "16": 15.58,
+      "17": 14.13
+    },
+    "ros": 86.52,
+    "ros_playoff": 31.64,
+    "ros_rank": 15,
+    "ros_pos_rank": 5,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 63.39,
+      "ppg": 15.85,
+      "xfp": 57.51,
+      "xfp_pg": 14.38
+    },
+    "signals": {
+      "usage_trend": -1.01,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.29
+        },
+        {
+          "week": 2,
+          "value": 0.25
+        },
+        {
+          "week": 3,
+          "value": 0.28
+        },
+        {
+          "week": 4,
+          "value": 0.21
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.89
+        },
+        {
+          "week": 2,
+          "value": 0.91
+        },
+        {
+          "week": 3,
+          "value": 0.57
+        },
+        {
+          "week": 4,
+          "value": 0.65
+        }
+      ],
+      "luck": 5.88,
+      "market_drift": -3.04,
+      "fc_value": 7036,
+      "fc_rank": 17,
+      "market_gap": 2,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 6342
+        },
+        {
+          "date": "2026-09-15",
+          "value": 6717
+        },
+        {
+          "date": "2026-09-22",
+          "value": 6957
+        },
+        {
+          "date": "2026-09-29",
+          "value": 7019
+        },
+        {
+          "date": "2026-10-06",
+          "value": 7256
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "9221",
+    "name": "Tyjae Spears",
+    "pos": "RB",
+    "team": "TEN",
+    "bye": 10,
+    "injury": "Out",
+    "roster_id": 7,
+    "proj": {
+      "5": 0,
+      "6": 8.71,
+      "7": 7.53,
+      "8": 8.22,
+      "9": 8.02,
+      "10": 0,
+      "11": 7.88,
+      "12": 8.17,
+      "13": 8.59,
+      "14": 8.13,
+      "15": 7.87,
+      "16": 8.1,
+      "17": 7.6
+    },
+    "ros": 0.5,
+    "ros_playoff": 0,
+    "ros_rank": 40,
+    "ros_pos_rank": 11,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 34.38,
+      "ppg": 8.6,
+      "xfp": 34.16,
+      "xfp_pg": 8.54
+    },
+    "signals": {
+      "usage_trend": -0.74,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.24
+        },
+        {
+          "week": 2,
+          "value": 0.23
+        },
+        {
+          "week": 3,
+          "value": 0.31
+        },
+        {
+          "week": 4,
+          "value": 0.23
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.69
+        },
+        {
+          "week": 2,
+          "value": 0.81
+        },
+        {
+          "week": 3,
+          "value": 0.8
+        },
+        {
+          "week": 4,
+          "value": 0.82
+        }
+      ],
+      "luck": 0.22,
+      "market_drift": 0.71,
+      "fc_value": 3670,
+      "fc_rank": 36,
+      "market_gap": -4,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 3339
+        },
+        {
+          "date": "2026-09-15",
+          "value": 3422
+        },
+        {
+          "date": "2026-09-22",
+          "value": 3476
+        },
+        {
+          "date": "2026-09-29",
+          "value": 3597
+        },
+        {
+          "date": "2026-10-06",
+          "value": 3736
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "11615",
+    "name": "Tyrone Tracy",
+    "pos": "RB",
+    "team": "NYG",
+    "bye": 14,
+    "injury": null,
+    "roster_id": null,
+    "proj": {
+      "5": 10.46,
+      "6": 9.93,
+      "7": 9.34,
+      "8": 9.25,
+      "9": 9.37,
+      "10": 8.74,
+      "11": 8.8,
+      "12": 8.57,
+      "13": 9.54,
+      "14": 0,
+      "15": 9.31,
+      "16": 8.66,
+      "17": 9.91
+    },
+    "ros": 11.08,
+    "ros_playoff": 4.02,
+    "ros_rank": 38,
+    "ros_pos_rank": 10,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 37.29,
+      "ppg": 9.32,
+      "xfp": 38.07,
+      "xfp_pg": 9.52
+    },
+    "signals": {
+      "usage_trend": 1.02,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.17
+        },
+        {
+          "week": 2,
+          "value": 0.18
+        },
+        {
+          "week": 3,
+          "value": 0.14
+        },
+        {
+          "week": 4,
+          "value": 0.16
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.74
+        },
+        {
+          "week": 2,
+          "value": 0.64
+        },
+        {
+          "week": 3,
+          "value": 0.81
+        },
+        {
+          "week": 4,
+          "value": 0.8
+        }
+      ],
+      "luck": -0.78,
+      "market_drift": 2.54,
+      "fc_value": 4122,
+      "fc_rank": 35,
+      "market_gap": -3,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 3904
+        },
+        {
+          "date": "2026-09-15",
+          "value": 3914
+        },
+        {
+          "date": "2026-09-22",
+          "value": 4089
+        },
+        {
+          "date": "2026-09-29",
+          "value": 4126
+        },
+        {
+          "date": "2026-10-06",
+          "value": 4069
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "BUY",
+    "tag_reasons": [
+      "Usage rising over the last 3 weeks",
+      "Scoring below expected fantasy points"
+    ]
+  },
+  {
+    "id": "8228",
+    "name": "Jaylen Warren",
+    "pos": "RB",
+    "team": "PIT",
+    "bye": 5,
+    "injury": null,
+    "roster_id": null,
+    "proj": {
+      "5": 0,
+      "6": 10.19,
+      "7": 10.46,
+      "8": 10.83,
+      "9": 10.09,
+      "10": 11.01,
+      "11": 9.4,
+      "12": 11.08,
+      "13": 8.8,
+      "14": 8.96,
+      "15": 9.44,
+      "16": 10.75,
+      "17": 10.85
+    },
+    "ros": 21.06,
+    "ros_playoff": 8.76,
+    "ros_rank": 34,
+    "ros_pos_rank": 9,
+    "repl": 8.4,
+    "season": {
+      "games": 4,
+      "pts": 42.25,
+      "ppg": 10.56,
+      "xfp": 39.97,
+      "xfp_pg": 9.99
+    },
+    "signals": {
+      "usage_trend": 0.1,
+      "usage_metric": "snap_pct+carries",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.28
+        },
+        {
+          "week": 2,
+          "value": 0.16
+        },
+        {
+          "week": 3,
+          "value": 0.28
+        },
+        {
+          "week": 4,
+          "value": 0.26
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.8
+        },
+        {
+          "week": 2,
+          "value": 0.96
+        },
+        {
+          "week": 3,
+          "value": 0.68
+        },
+        {
+          "week": 4,
+          "value": 0.56
+        }
+      ],
+      "luck": 2.28,
+      "market_drift": 2.35,
+      "fc_value": 4373,
+      "fc_rank": 32,
+      "market_gap": -2,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 4071
+        },
+        {
+          "date": "2026-09-15",
+          "value": 4184
+        },
+        {
+          "date": "2026-09-22",
+          "value": 4292
+        },
+        {
+          "date": "2026-09-29",
+          "value": 4377
+        },
+        {
+          "date": "2026-10-06",
+          "value": 4297
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "9488",
+    "name": "Ja'Marr Chase",
+    "pos": "WR",
+    "team": "CIN",
+    "bye": 10,
+    "injury": null,
+    "roster_id": 8,
+    "proj": {
+      "5": 20.89,
+      "6": 22.2,
+      "7": 21.55,
+      "8": 20.76,
+      "9": 20.22,
+      "10": 0,
+      "11": 18.55,
+      "12": 20.52,
+      "13": 20.22,
+      "14": 19.61,
+      "15": 17.62,
+      "16": 21.63,
+      "17": 20.63
+    },
+    "ros": 135.2,
+    "ros_playoff": 48.87,
+    "ros_rank": 1,
+    "ros_pos_rank": 1,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 90.97,
+      "ppg": 22.74,
+      "xfp": 76.54,
+      "xfp_pg": 19.14
+    },
+    "signals": {
+      "usage_trend": 1.31,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.23
+        },
+        {
+          "week": 2,
+          "value": 0.24
+        },
+        {
+          "week": 3,
+          "value": 0.16
+        },
+        {
+          "week": 4,
+          "value": 0.17
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.74
+        },
+        {
+          "week": 2,
+          "value": 0.74
+        },
+        {
+          "week": 3,
+          "value": 0.57
+        },
+        {
+          "week": 4,
+          "value": 0.79
+        }
+      ],
+      "luck": 14.43,
+      "market_drift": 2.81,
+      "fc_value": 9028,
+      "fc_rank": 6,
+      "market_gap": 5,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 8580
+        },
+        {
+          "date": "2026-09-15",
+          "value": 8352
+        },
+        {
+          "date": "2026-09-22",
+          "value": 8652
+        },
+        {
+          "date": "2026-09-29",
+          "value": 9000
+        },
+        {
+          "date": "2026-10-06",
+          "value": 9076
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "8146",
+    "name": "Justin Jefferson",
+    "pos": "WR",
+    "team": "MIN",
+    "bye": 6,
+    "injury": null,
+    "roster_id": 9,
+    "proj": {
+      "5": 16.83,
+      "6": 0,
+      "7": 16.71,
+      "8": 15.8,
+      "9": 17.05,
+      "10": 17.31,
+      "11": 18.17,
+      "12": 17.62,
+      "13": 17.78,
+      "14": 17.31,
+      "15": 18.12,
+      "16": 19.28,
+      "17": 19.48
+    },
+    "ros": 102.26,
+    "ros_playoff": 44.37,
+    "ros_rank": 8,
+    "ros_pos_rank": 2,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 69.61,
+      "ppg": 17.4,
+      "xfp": 75.08,
+      "xfp_pg": 18.77
+    },
+    "signals": {
+      "usage_trend": 0.45,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.2
+        },
+        {
+          "week": 2,
+          "value": 0.25
+        },
+        {
+          "week": 3,
+          "value": 0.13
+        },
+        {
+          "week": 4,
+          "value": 0.18
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.56
+        },
+        {
+          "week": 2,
+          "value": 0.91
+        },
+        {
+          "week": 3,
+          "value": 0.6
+        },
+        {
+          "week": 4,
+          "value": 0.65
+        }
+      ],
+      "luck": -5.47,
+      "market_drift": 1.66,
+      "fc_value": 8275,
+      "fc_rank": 10,
+      "market_gap": 2,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 7557
+        },
+        {
+          "date": "2026-09-15",
+          "value": 7748
+        },
+        {
+          "date": "2026-09-22",
+          "value": 7849
+        },
+        {
+          "date": "2026-09-29",
+          "value": 8321
+        },
+        {
+          "date": "2026-10-06",
+          "value": 8262
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "9493",
+    "name": "Puka Nacua",
+    "pos": "WR",
+    "team": "LAR",
+    "bye": 8,
+    "injury": null,
+    "roster_id": 10,
+    "proj": {
+      "5": 17.71,
+      "6": 18.26,
+      "7": 15.2,
+      "8": 0,
+      "9": 18.54,
+      "10": 18.9,
+      "11": 18.31,
+      "12": 19.07,
+      "13": 15.44,
+      "14": 15.88,
+      "15": 15.3,
+      "16": 19.19,
+      "17": 17.1
+    },
+    "ros": 99.7,
+    "ros_playoff": 36.44,
+    "ros_rank": 10,
+    "ros_pos_rank": 3,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 64.19,
+      "ppg": 16.05,
+      "xfp": 69.12,
+      "xfp_pg": 17.28
+    },
+    "signals": {
+      "usage_trend": 0.62,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.28
+        },
+        {
+          "week": 2,
+          "value": 0.12
+        },
+        {
+          "week": 3,
+          "value": 0.14
+        },
+        {
+          "week": 4,
+          "value": 0.24
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.87
+        },
+        {
+          "week": 2,
+          "value": 0.59
+        },
+        {
+          "week": 3,
+          "value": 0.67
+        },
+        {
+          "week": 4,
+          "value": 0.72
+        }
+      ],
+      "luck": -4.93,
+      "market_drift": 2.7,
+      "fc_value": 7976,
+      "fc_rank": 12,
+      "market_gap": 2,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 7502
+        },
+        {
+          "date": "2026-09-15",
+          "value": 7640
+        },
+        {
+          "date": "2026-09-22",
+          "value": 7572
+        },
+        {
+          "date": "2026-09-29",
+          "value": 8102
+        },
+        {
+          "date": "2026-10-06",
+          "value": 8294
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "BUY",
+    "tag_reasons": [
+      "Usage rising over the last 3 weeks",
+      "Scoring below expected fantasy points"
+    ]
+  },
+  {
+    "id": "7547",
+    "name": "Amon-Ra St. Brown",
+    "pos": "WR",
+    "team": "DET",
+    "bye": 8,
+    "injury": null,
+    "roster_id": 1,
+    "proj": {
+      "5": 17.28,
+      "6": 17.69,
+      "7": 15.43,
+      "8": 0,
+      "9": 18.37,
+      "10": 15.43,
+      "11": 16.17,
+      "12": 17.59,
+      "13": 16.48,
+      "14": 16.65,
+      "15": 18.76,
+      "16": 16.59,
+      "17": 17.01
+    },
+    "ros": 94.25,
+    "ros_playoff": 37.59,
+    "ros_rank": 12,
+    "ros_pos_rank": 4,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 70.44,
+      "ppg": 17.61,
+      "xfp": 61.85,
+      "xfp_pg": 15.46
+    },
+    "signals": {
+      "usage_trend": -0.95,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.29
+        },
+        {
+          "week": 2,
+          "value": 0.19
+        },
+        {
+          "week": 3,
+          "value": 0.32
+        },
+        {
+          "week": 4,
+          "value": 0.23
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.61
+        },
+        {
+          "week": 2,
+          "value": 0.76
+        },
+        {
+          "week": 3,
+          "value": 0.77
+        },
+        {
+          "week": 4,
+          "value": 0.56
+        }
+      ],
+      "luck": 8.59,
+      "market_drift": 0.42,
+      "fc_value": 7210,
+      "fc_rank": 16,
+      "market_gap": 4,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 6843
+        },
+        {
+          "date": "2026-09-15",
+          "value": 6821
+        },
+        {
+          "date": "2026-09-22",
+          "value": 6869
+        },
+        {
+          "date": "2026-09-29",
+          "value": 6951
+        },
+        {
+          "date": "2026-10-06",
+          "value": 7341
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "11632",
+    "name": "Malik Nabers",
+    "pos": "WR",
+    "team": "NYG",
+    "bye": 14,
+    "injury": null,
+    "roster_id": 2,
+    "proj": {
+      "5": 15.85,
+      "6": 14.67,
+      "7": 17.39,
+      "8": 14.25,
+      "9": 17.69,
+      "10": 16.95,
+      "11": 17.61,
+      "12": 16.75,
+      "13": 16.8,
+      "14": 0,
+      "15": 17.42,
+      "16": 15.23,
+      "17": 16.78
+    },
+    "ros": 88.19,
+    "ros_playoff": 33.2,
+    "ros_rank": 14,
+    "ros_pos_rank": 5,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 63.74,
+      "ppg": 15.94,
+      "xfp": 57.97,
+      "xfp_pg": 14.49
+    },
+    "signals": {
+      "usage_trend": -1.23,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.13
+        },
+        {
+          "week": 2,
+          "value": 0.22
+        },
+        {
+          "week": 3,
+          "value": 0.14
+        },
+        {
+          "week": 4,
+          "value": 0.16
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.71
+        },
+        {
+          "week": 2,
+          "value": 0.83
+        },
+        {
+          "week": 3,
+          "value": 0.66
+        },
+        {
+          "week": 4,
+          "value": 0.66
+        }
+      ],
+      "luck": 5.77,
+      "market_drift": 2.16,
+      "fc_value": 6872,
+      "fc_rank": 19,
+      "market_gap": 5,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 6494
+        },
+        {
+          "date": "2026-09-15",
+          "value": 6603
+        },
+        {
+          "date": "2026-09-22",
+          "value": 6815
+        },
+        {
+          "date": "2026-09-29",
+          "value": 6671
+        },
+        {
+          "date": "2026-10-06",
+          "value": 6849
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "9997",
+    "name": "Zay Flowers",
+    "pos": "WR",
+    "team": "BAL",
+    "bye": 7,
+    "injury": null,
+    "roster_id": 3,
+    "proj": {
+      "5": 13.04,
+      "6": 12.6,
+      "7": 0,
+      "8": 13.18,
+      "9": 12.61,
+      "10": 13.06,
+      "11": 14.07,
+      "12": 13.99,
+      "13": 12.62,
+      "14": 12.46,
+      "15": 14.36,
+      "16": 13.64,
+      "17": 14.25
+    },
+    "ros": 50.68,
+    "ros_playoff": 22.43,
+    "ros_rank": 25,
+    "ros_pos_rank": 9,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 47.56,
+      "ppg": 11.89,
+      "xfp": 56.35,
+      "xfp_pg": 14.09
+    },
+    "signals": {
+      "usage_trend": 0.64,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.23
+        },
+        {
+          "week": 2,
+          "value": 0.25
+        },
+        {
+          "week": 3,
+          "value": 0.3
+        },
+        {
+          "week": 4,
+          "value": 0.16
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.76
+        },
+        {
+          "week": 2,
+          "value": 0.74
+        },
+        {
+          "week": 3,
+          "value": 0.88
+        },
+        {
+          "week": 4,
+          "value": 0.87
+        }
+      ],
+      "luck": -8.79,
+      "market_drift": 1.92,
+      "fc_value": 6249,
+      "fc_rank": 23,
+      "market_gap": -2,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5854
+        },
+        {
+          "date": "2026-09-15",
+          "value": 5751
+        },
+        {
+          "date": "2026-09-22",
+          "value": 5985
+        },
+        {
+          "date": "2026-09-29",
+          "value": 6284
+        },
+        {
+          "date": "2026-10-06",
+          "value": 6334
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "BUY",
+    "tag_reasons": [
+      "Usage rising over the last 3 weeks",
+      "Scoring below expected fantasy points"
+    ]
+  },
+  {
+    "id": "11628",
+    "name": "Ladd McConkey",
+    "pos": "WR",
+    "team": "LAC",
+    "bye": 12,
+    "injury": null,
+    "roster_id": 4,
+    "proj": {
+      "5": 11.01,
+      "6": 12.55,
+      "7": 13.67,
+      "8": 10.95,
+      "9": 13.75,
+      "10": 12.9,
+      "11": 12.54,
+      "12": 0,
+      "13": 13.47,
+      "14": 13.64,
+      "15": 13.64,
+      "16": 11.08,
+      "17": 13.16
+    },
+    "ros": 43.16,
+    "ros_playoff": 15.87,
+    "ros_rank": 29,
+    "ros_pos_rank": 11,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 47.56,
+      "ppg": 11.89,
+      "xfp": 51.57,
+      "xfp_pg": 12.89
+    },
+    "signals": {
+      "usage_trend": -0.26,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.14
+        },
+        {
+          "week": 2,
+          "value": 0.18
+        },
+        {
+          "week": 3,
+          "value": 0.19
+        },
+        {
+          "week": 4,
+          "value": 0.18
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.72
+        },
+        {
+          "week": 2,
+          "value": 0.56
+        },
+        {
+          "week": 3,
+          "value": 0.72
+        },
+        {
+          "week": 4,
+          "value": 0.73
+        }
+      ],
+      "luck": -4.01,
+      "market_drift": 3.01,
+      "fc_value": 5288,
+      "fc_rank": 30,
+      "market_gap": 1,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5020
+        },
+        {
+          "date": "2026-09-15",
+          "value": 4882
+        },
+        {
+          "date": "2026-09-22",
+          "value": 5111
+        },
+        {
+          "date": "2026-09-29",
+          "value": 5258
+        },
+        {
+          "date": "2026-10-06",
+          "value": 5384
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "11635",
+    "name": "Brian Thomas Jr.",
+    "pos": "WR",
+    "team": "JAX",
+    "bye": 8,
+    "injury": null,
+    "roster_id": 5,
+    "proj": {
+      "5": 11.95,
+      "6": 11.9,
+      "7": 12.8,
+      "8": 0,
+      "9": 11.67,
+      "10": 12.4,
+      "11": 13.62,
+      "12": 12.11,
+      "13": 14.57,
+      "14": 14.31,
+      "15": 13.29,
+      "16": 12.03,
+      "17": 12.85
+    },
+    "ros": 44.3,
+    "ros_playoff": 16.31,
+    "ros_rank": 28,
+    "ros_pos_rank": 10,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 55.56,
+      "ppg": 13.89,
+      "xfp": 50.13,
+      "xfp_pg": 12.53
+    },
+    "signals": {
+      "usage_trend": -0.57,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.2
+        },
+        {
+          "week": 2,
+          "value": 0.16
+        },
+        {
+          "week": 3,
+          "value": 0.12
+        },
+        {
+          "week": 4,
+          "value": 0.16
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.82
+        },
+        {
+          "week": 2,
+          "value": 0.83
+        },
+        {
+          "week": 3,
+          "value": 0.56
+        },
+        {
+          "week": 4,
+          "value": 0.95
+        }
+      ],
+      "luck": 5.43,
+      "market_drift": -4.14,
+      "fc_value": 5895,
+      "fc_rank": 27,
+      "market_gap": -1,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5344
+        },
+        {
+          "date": "2026-09-15",
+          "value": 5680
+        },
+        {
+          "date": "2026-09-22",
+          "value": 5783
+        },
+        {
+          "date": "2026-09-29",
+          "value": 5900
+        },
+        {
+          "date": "2026-10-06",
+          "value": 5982
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "9500",
+    "name": "Jaxon Smith-Njigba",
+    "pos": "WR",
+    "team": "SEA",
+    "bye": 8,
+    "injury": null,
+    "roster_id": 6,
+    "proj": {
+      "5": 16.14,
+      "6": 13.05,
+      "7": 13.7,
+      "8": 0,
+      "9": 13.43,
+      "10": 14.13,
+      "11": 13.99,
+      "12": 13.56,
+      "13": 12.96,
+      "14": 13.39,
+      "15": 14.64,
+      "16": 16.25,
+      "17": 13.39
+    },
+    "ros": 59.43,
+    "ros_playoff": 25.47,
+    "ros_rank": 20,
+    "ros_pos_rank": 6,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 58.67,
+      "ppg": 14.67,
+      "xfp": 59.91,
+      "xfp_pg": 14.98
+    },
+    "signals": {
+      "usage_trend": 1.25,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.25
+        },
+        {
+          "week": 2,
+          "value": 0.26
+        },
+        {
+          "week": 3,
+          "value": 0.31
+        },
+        {
+          "week": 4,
+          "value": 0.26
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.61
+        },
+        {
+          "week": 2,
+          "value": 0.72
+        },
+        {
+          "week": 3,
+          "value": 0.74
+        },
+        {
+          "week": 4,
+          "value": 0.67
+        }
+      ],
+      "luck": -1.24,
+      "market_drift": -3.51,
+      "fc_value": 6246,
+      "fc_rank": 24,
+      "market_gap": 4,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5773
+        },
+        {
+          "date": "2026-09-15",
+          "value": 6043
+        },
+        {
+          "date": "2026-09-22",
+          "value": 6112
+        },
+        {
+          "date": "2026-09-29",
+          "value": 6250
+        },
+        {
+          "date": "2026-10-06",
+          "value": 6426
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "BUY",
+    "tag_reasons": [
+      "Usage rising over the last 3 weeks",
+      "Scoring below expected fantasy points"
+    ]
+  },
+  {
+    "id": "8167",
+    "name": "Garrett Wilson",
+    "pos": "WR",
+    "team": "NYJ",
+    "bye": 9,
+    "injury": "Doubtful",
+    "roster_id": 7,
+    "proj": {
+      "5": 14.42,
+      "6": 13.42,
+      "7": 11.71,
+      "8": 12.8,
+      "9": 0,
+      "10": 14.77,
+      "11": 13.83,
+      "12": 14.06,
+      "13": 14.36,
+      "14": 12.99,
+      "15": 14.16,
+      "16": 12.86,
+      "17": 13.42
+    },
+    "ros": 53.6,
+    "ros_playoff": 19.71,
+    "ros_rank": 23,
+    "ros_pos_rank": 7,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 45.45,
+      "ppg": 11.36,
+      "xfp": 53.84,
+      "xfp_pg": 13.46
+    },
+    "signals": {
+      "usage_trend": 0.04,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.22
+        },
+        {
+          "week": 2,
+          "value": 0.2
+        },
+        {
+          "week": 3,
+          "value": 0.15
+        },
+        {
+          "week": 4,
+          "value": 0.22
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.63
+        },
+        {
+          "week": 2,
+          "value": 0.78
+        },
+        {
+          "week": 3,
+          "value": 0.59
+        },
+        {
+          "week": 4,
+          "value": 0.56
+        }
+      ],
+      "luck": -8.39,
+      "market_drift": 2.7,
+      "fc_value": 5588,
+      "fc_rank": 29,
+      "market_gap": 6,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5218
+        },
+        {
+          "date": "2026-09-15",
+          "value": 5412
+        },
+        {
+          "date": "2026-09-22",
+          "value": 5540
+        },
+        {
+          "date": "2026-09-29",
+          "value": 5589
+        },
+        {
+          "date": "2026-10-06",
+          "value": 5725
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "10229",
+    "name": "Rashee Rice",
+    "pos": "WR",
+    "team": "KC",
+    "bye": 10,
+    "injury": null,
+    "roster_id": 8,
+    "proj": {
+      "5": 14.91,
+      "6": 13.42,
+      "7": 15.15,
+      "8": 13.38,
+      "9": 13.38,
+      "10": 0,
+      "11": 12.24,
+      "12": 12.42,
+      "13": 12.47,
+      "14": 12.24,
+      "15": 14.06,
+      "16": 14.38,
+      "17": 12.81
+    },
+    "ros": 51.66,
+    "ros_playoff": 20.93,
+    "ros_rank": 24,
+    "ros_pos_rank": 8,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 47.02,
+      "ppg": 11.76,
+      "xfp": 50.14,
+      "xfp_pg": 12.54
+    },
+    "signals": {
+      "usage_trend": 1.4,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.3
+        },
+        {
+          "week": 2,
+          "value": 0.28
+        },
+        {
+          "week": 3,
+          "value": 0.31
+        },
+        {
+          "week": 4,
+          "value": 0.27
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.79
+        },
+        {
+          "week": 2,
+          "value": 0.82
+        },
+        {
+          "week": 3,
+          "value": 0.58
+        },
+        {
+          "week": 4,
+          "value": 0.7
+        }
+      ],
+      "luck": -3.12,
+      "market_drift": -0.27,
+      "fc_value": 6418,
+      "fc_rank": 21,
+      "market_gap": -3,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5979
+        },
+        {
+          "date": "2026-09-15",
+          "value": 6103
+        },
+        {
+          "date": "2026-09-22",
+          "value": 6261
+        },
+        {
+          "date": "2026-09-29",
+          "value": 6408
+        },
+        {
+          "date": "2026-10-06",
+          "value": 6484
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "BUY",
+    "tag_reasons": [
+      "Usage rising over the last 3 weeks",
+      "Scoring below expected fantasy points"
+    ]
+  },
+  {
+    "id": "11638",
+    "name": "Xavier Worthy",
+    "pos": "WR",
+    "team": "KC",
+    "bye": 10,
+    "injury": null,
+    "roster_id": null,
+    "proj": {
+      "5": 9.7,
+      "6": 8.85,
+      "7": 9.98,
+      "8": 8.13,
+      "9": 8.19,
+      "10": 0,
+      "11": 9.57,
+      "12": 10.26,
+      "13": 8.54,
+      "14": 8.12,
+      "15": 8.57,
+      "16": 8.18,
+      "17": 9.08
+    },
+    "ros": 3.11,
+    "ros_playoff": 0,
+    "ros_rank": 39,
+    "ros_pos_rank": 12,
+    "repl": 9.1,
+    "season": {
+      "games": 4,
+      "pts": 38.72,
+      "ppg": 9.68,
+      "xfp": 37.65,
+      "xfp_pg": 9.41
+    },
+    "signals": {
+      "usage_trend": 1.05,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.13
+        },
+        {
+          "week": 2,
+          "value": 0.29
+        },
+        {
+          "week": 3,
+          "value": 0.29
+        },
+        {
+          "week": 4,
+          "value": 0.21
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.7
+        },
+        {
+          "week": 2,
+          "value": 0.64
+        },
+        {
+          "week": 3,
+          "value": 0.82
+        },
+        {
+          "week": 4,
+          "value": 0.59
+        }
+      ],
+      "luck": 1.07,
+      "market_drift": -2.09,
+      "fc_value": 4234,
+      "fc_rank": 33,
+      "market_gap": -6,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 3979
+        },
+        {
+          "date": "2026-09-15",
+          "value": 3916
+        },
+        {
+          "date": "2026-09-22",
+          "value": 4123
+        },
+        {
+          "date": "2026-09-29",
+          "value": 4300
+        },
+        {
+          "date": "2026-10-06",
+          "value": 4155
+        }
+      ],
+      "breakout": "Route rate jumped to 81% in week 4"
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "9504",
+    "name": "Trey McBride",
+    "pos": "TE",
+    "team": "ARI",
+    "bye": 8,
+    "injury": null,
+    "roster_id": 9,
+    "proj": {
+      "5": 14.93,
+      "6": 12.77,
+      "7": 13.93,
+      "8": 0,
+      "9": 12.08,
+      "10": 14.89,
+      "11": 14,
+      "12": 12.8,
+      "13": 13.97,
+      "14": 13.11,
+      "15": 13.66,
+      "16": 13.33,
+      "17": 15.11
+    },
+    "ros": 82.98,
+    "ros_playoff": 32.55,
+    "ros_rank": 16,
+    "ros_pos_rank": 2,
+    "repl": 6.8,
+    "season": {
+      "games": 4,
+      "pts": 59.63,
+      "ppg": 14.91,
+      "xfp": 59.38,
+      "xfp_pg": 14.85
+    },
+    "signals": {
+      "usage_trend": -1.35,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.17
+        },
+        {
+          "week": 2,
+          "value": 0.22
+        },
+        {
+          "week": 3,
+          "value": 0.23
+        },
+        {
+          "week": 4,
+          "value": 0.15
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.8
+        },
+        {
+          "week": 2,
+          "value": 0.65
+        },
+        {
+          "week": 3,
+          "value": 0.72
+        },
+        {
+          "week": 4,
+          "value": 0.81
+        }
+      ],
+      "luck": 0.25,
+      "market_drift": 3.41,
+      "fc_value": 6501,
+      "fc_rank": 20,
+      "market_gap": 4,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5989
+        },
+        {
+          "date": "2026-09-15",
+          "value": 6025
+        },
+        {
+          "date": "2026-09-22",
+          "value": 6178
+        },
+        {
+          "date": "2026-09-29",
+          "value": 6334
+        },
+        {
+          "date": "2026-10-06",
+          "value": 6390
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "10859",
+    "name": "Sam LaPorta",
+    "pos": "TE",
+    "team": "DET",
+    "bye": 8,
+    "injury": null,
+    "roster_id": 10,
+    "proj": {
+      "5": 11.44,
+      "6": 10.98,
+      "7": 10.79,
+      "8": 0,
+      "9": 11.23,
+      "10": 9.32,
+      "11": 10.67,
+      "12": 11.33,
+      "13": 9.48,
+      "14": 10.28,
+      "15": 10.06,
+      "16": 11.08,
+      "17": 10.8
+    },
+    "ros": 45.86,
+    "ros_playoff": 17.31,
+    "ros_rank": 27,
+    "ros_pos_rank": 3,
+    "repl": 6.8,
+    "season": {
+      "games": 4,
+      "pts": 47.24,
+      "ppg": 11.81,
+      "xfp": 37.76,
+      "xfp_pg": 9.44
+    },
+    "signals": {
+      "usage_trend": 1.08,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.29
+        },
+        {
+          "week": 2,
+          "value": 0.24
+        },
+        {
+          "week": 3,
+          "value": 0.14
+        },
+        {
+          "week": 4,
+          "value": 0.22
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.74
+        },
+        {
+          "week": 2,
+          "value": 0.87
+        },
+        {
+          "week": 3,
+          "value": 0.83
+        },
+        {
+          "week": 4,
+          "value": 0.66
+        }
+      ],
+      "luck": 9.48,
+      "market_drift": -4.16,
+      "fc_value": 4488,
+      "fc_rank": 31,
+      "market_gap": 4,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 4065
+        },
+        {
+          "date": "2026-09-15",
+          "value": 4244
+        },
+        {
+          "date": "2026-09-22",
+          "value": 4471
+        },
+        {
+          "date": "2026-09-29",
+          "value": 4487
+        },
+        {
+          "date": "2026-10-06",
+          "value": 4619
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "11604",
+    "name": "Brock Bowers",
+    "pos": "TE",
+    "team": "LV",
+    "bye": 8,
+    "injury": null,
+    "roster_id": 1,
+    "proj": {
+      "5": 15.49,
+      "6": 15.3,
+      "7": 14.9,
+      "8": 0,
+      "9": 13.53,
+      "10": 14.72,
+      "11": 14.95,
+      "12": 14.87,
+      "13": 14.13,
+      "14": 14.57,
+      "15": 14.79,
+      "16": 14.4,
+      "17": 13.01
+    },
+    "ros": 93.06,
+    "ros_playoff": 32.7,
+    "ros_rank": 13,
+    "ros_pos_rank": 1,
+    "repl": 6.8,
+    "season": {
+      "games": 4,
+      "pts": 62.87,
+      "ppg": 15.72,
+      "xfp": 58.98,
+      "xfp_pg": 14.75
+    },
+    "signals": {
+      "usage_trend": -0.38,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.15
+        },
+        {
+          "week": 2,
+          "value": 0.29
+        },
+        {
+          "week": 3,
+          "value": 0.16
+        },
+        {
+          "week": 4,
+          "value": 0.19
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.92
+        },
+        {
+          "week": 2,
+          "value": 0.85
+        },
+        {
+          "week": 3,
+          "value": 0.87
+        },
+        {
+          "week": 4,
+          "value": 0.59
+        }
+      ],
+      "luck": 3.89,
+      "market_drift": 1.71,
+      "fc_value": 6108,
+      "fc_rank": 25,
+      "market_gap": 12,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5794
+        },
+        {
+          "date": "2026-09-15",
+          "value": 5619
+        },
+        {
+          "date": "2026-09-22",
+          "value": 6010
+        },
+        {
+          "date": "2026-09-29",
+          "value": 6011
+        },
+        {
+          "date": "2026-10-06",
+          "value": 6052
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "5844",
+    "name": "George Kittle",
+    "pos": "TE",
+    "team": "SF",
+    "bye": 14,
+    "injury": "IR",
+    "roster_id": 2,
+    "proj": {
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 12.07,
+      "10": 12.17,
+      "11": 10.48,
+      "12": 11.57,
+      "13": 10.98,
+      "14": 0,
+      "15": 13.09,
+      "16": 10.66,
+      "17": 11.05
+    },
+    "ros": 37.67,
+    "ros_playoff": 21.6,
+    "ros_rank": 30,
+    "ros_pos_rank": 4,
+    "repl": 6.8,
+    "season": {
+      "games": 4,
+      "pts": 49.22,
+      "ppg": 12.31,
+      "xfp": 45.13,
+      "xfp_pg": 11.28
+    },
+    "signals": {
+      "usage_trend": -1.02,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.17
+        },
+        {
+          "week": 2,
+          "value": 0.29
+        },
+        {
+          "week": 3,
+          "value": 0.2
+        },
+        {
+          "week": 4,
+          "value": 0.32
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.67
+        },
+        {
+          "week": 2,
+          "value": 0.57
+        },
+        {
+          "week": 3,
+          "value": 0.9
+        },
+        {
+          "week": 4,
+          "value": 0.73
+        }
+      ],
+      "luck": 4.09,
+      "market_drift": -1.28,
+      "fc_value": 5808,
+      "fc_rank": 28,
+      "market_gap": -2,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 5543
+        },
+        {
+          "date": "2026-09-15",
+          "value": 5563
+        },
+        {
+          "date": "2026-09-22",
+          "value": 5707
+        },
+        {
+          "date": "2026-09-29",
+          "value": 5810
+        },
+        {
+          "date": "2026-10-06",
+          "value": 5810
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "SELL",
+    "tag_reasons": [
+      "Scoring well above expected fantasy points",
+      "Usage trending down"
+    ]
+  },
+  {
+    "id": "12530",
+    "name": "Tyler Warren",
+    "pos": "TE",
+    "team": "IND",
+    "bye": 11,
+    "injury": null,
+    "roster_id": null,
+    "proj": {
+      "5": 9.51,
+      "6": 9.18,
+      "7": 7.66,
+      "8": 8.75,
+      "9": 7.76,
+      "10": 8.65,
+      "11": 0,
+      "12": 8.39,
+      "13": 9.16,
+      "14": 8.68,
+      "15": 7.68,
+      "16": 9.66,
+      "17": 9.54
+    },
+    "ros": 23.02,
+    "ros_playoff": 9.72,
+    "ros_rank": 32,
+    "ros_pos_rank": 5,
+    "repl": 6.8,
+    "season": {
+      "games": 4,
+      "pts": 37.64,
+      "ppg": 9.41,
+      "xfp": 34.89,
+      "xfp_pg": 8.72
+    },
+    "signals": {
+      "usage_trend": 0.11,
+      "usage_metric": "target_share",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.26
+        },
+        {
+          "week": 2,
+          "value": 0.29
+        },
+        {
+          "week": 3,
+          "value": 0.18
+        },
+        {
+          "week": 4,
+          "value": 0.26
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.96
+        },
+        {
+          "week": 2,
+          "value": 0.85
+        },
+        {
+          "week": 3,
+          "value": 0.87
+        },
+        {
+          "week": 4,
+          "value": 0.9
+        }
+      ],
+      "luck": 2.75,
+      "market_drift": 2.01,
+      "fc_value": 4186,
+      "fc_rank": 34,
+      "market_gap": 2,
+      "fc_history": [
+        {
+          "date": "2026-09-08",
+          "value": 3984
+        },
+        {
+          "date": "2026-09-15",
+          "value": 3876
+        },
+        {
+          "date": "2026-09-22",
+          "value": 4070
+        },
+        {
+          "date": "2026-09-29",
+          "value": 4121
+        },
+        {
+          "date": "2026-10-06",
+          "value": 4339
+        }
+      ],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "5089",
+    "name": "Brandon Aubrey",
+    "pos": "K",
+    "team": "DAL",
+    "bye": 10,
+    "injury": null,
+    "roster_id": 3,
+    "proj": {
+      "5": 8.63,
+      "6": 9.94,
+      "7": 8.98,
+      "8": 9.46,
+      "9": 9.3,
+      "10": 0,
+      "11": 8.35,
+      "12": 9.77,
+      "13": 8.42,
+      "14": 9.31,
+      "15": 8.5,
+      "16": 8.37,
+      "17": 8.69
+    },
+    "ros": 21.32,
+    "ros_playoff": 5.94,
+    "ros_rank": 33,
+    "ros_pos_rank": 1,
+    "repl": 7.2,
+    "season": {
+      "games": 4,
+      "pts": 38.34,
+      "ppg": 9.59,
+      "xfp": 39.1,
+      "xfp_pg": 9.78
+    },
+    "signals": {
+      "usage_trend": 1,
+      "usage_metric": "fg_att",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.16
+        },
+        {
+          "week": 2,
+          "value": 0.13
+        },
+        {
+          "week": 3,
+          "value": 0.2
+        },
+        {
+          "week": 4,
+          "value": 0.13
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.94
+        },
+        {
+          "week": 2,
+          "value": 0.91
+        },
+        {
+          "week": 3,
+          "value": 0.78
+        },
+        {
+          "week": 4,
+          "value": 0.96
+        }
+      ],
+      "luck": -0.76,
+      "market_drift": 4.76,
+      "fc_value": null,
+      "fc_rank": null,
+      "market_gap": null,
+      "fc_history": [],
+      "breakout": null
+    },
+    "tag": "BUY",
+    "tag_reasons": [
+      "Usage rising over the last 3 weeks",
+      "Scoring below expected fantasy points"
+    ]
+  },
+  {
+    "id": "11789",
+    "name": "Jake Bates",
+    "pos": "K",
+    "team": "DET",
+    "bye": 8,
+    "injury": null,
+    "roster_id": null,
+    "proj": {
+      "5": 9.33,
+      "6": 7.96,
+      "7": 9.08,
+      "8": 0,
+      "9": 8.63,
+      "10": 9.61,
+      "11": 8.09,
+      "12": 9.33,
+      "13": 7.88,
+      "14": 9.58,
+      "15": 8.42,
+      "16": 8.59,
+      "17": 7.65
+    },
+    "ros": 17.75,
+    "ros_playoff": 4.59,
+    "ros_rank": 37,
+    "ros_pos_rank": 2,
+    "repl": 7.2,
+    "season": {
+      "games": 4,
+      "pts": 31.63,
+      "ppg": 7.91,
+      "xfp": 34.44,
+      "xfp_pg": 8.61
+    },
+    "signals": {
+      "usage_trend": 0.73,
+      "usage_metric": "fg_att",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.29
+        },
+        {
+          "week": 2,
+          "value": 0.19
+        },
+        {
+          "week": 3,
+          "value": 0.23
+        },
+        {
+          "week": 4,
+          "value": 0.28
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.76
+        },
+        {
+          "week": 2,
+          "value": 0.97
+        },
+        {
+          "week": 3,
+          "value": 0.84
+        },
+        {
+          "week": 4,
+          "value": 0.75
+        }
+      ],
+      "luck": -2.81,
+      "market_drift": 0,
+      "fc_value": null,
+      "fc_rank": null,
+      "market_gap": null,
+      "fc_history": [],
+      "breakout": null
+    },
+    "tag": "BUY",
+    "tag_reasons": [
+      "Usage rising over the last 3 weeks",
+      "Scoring below expected fantasy points"
+    ]
+  },
+  {
+    "id": "BAL",
+    "name": "Baltimore Ravens",
+    "pos": "DEF",
+    "team": "BAL",
+    "bye": 7,
+    "injury": null,
+    "roster_id": 4,
+    "proj": {
+      "5": 7.9,
+      "6": 7.84,
+      "7": 0,
+      "8": 7.28,
+      "9": 8.19,
+      "10": 7.91,
+      "11": 7.97,
+      "12": 8.79,
+      "13": 8.27,
+      "14": 8.96,
+      "15": 7.47,
+      "16": 7.68,
+      "17": 8.79
+    },
+    "ros": 19.05,
+    "ros_playoff": 6.66,
+    "ros_rank": 35,
+    "ros_pos_rank": 2,
+    "repl": 6.5,
+    "season": {
+      "games": 4,
+      "pts": 30.49,
+      "ppg": 7.62,
+      "xfp": 33.34,
+      "xfp_pg": 8.34
+    },
+    "signals": {
+      "usage_trend": -0.24,
+      "usage_metric": "pressure_rate",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.26
+        },
+        {
+          "week": 2,
+          "value": 0.22
+        },
+        {
+          "week": 3,
+          "value": 0.18
+        },
+        {
+          "week": 4,
+          "value": 0.14
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.72
+        },
+        {
+          "week": 2,
+          "value": 0.76
+        },
+        {
+          "week": 3,
+          "value": 0.87
+        },
+        {
+          "week": 4,
+          "value": 0.6
+        }
+      ],
+      "luck": -2.85,
+      "market_drift": 3.21,
+      "fc_value": null,
+      "fc_rank": null,
+      "market_gap": null,
+      "fc_history": [],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  },
+  {
+    "id": "DEN",
+    "name": "Denver Broncos",
+    "pos": "DEF",
+    "team": "DEN",
+    "bye": 12,
+    "injury": null,
+    "roster_id": null,
+    "proj": {
+      "5": 8.14,
+      "6": 9.77,
+      "7": 8.69,
+      "8": 9.1,
+      "9": 8.98,
+      "10": 8.82,
+      "11": 9.04,
+      "12": 0,
+      "13": 7.84,
+      "14": 8.76,
+      "15": 9.77,
+      "16": 8.8,
+      "17": 9.37
+    },
+    "ros": 29.08,
+    "ros_playoff": 12.66,
+    "ros_rank": 31,
+    "ros_pos_rank": 1,
+    "repl": 6.5,
+    "season": {
+      "games": 4,
+      "pts": 35.59,
+      "ppg": 8.9,
+      "xfp": 32.38,
+      "xfp_pg": 8.1
+    },
+    "signals": {
+      "usage_trend": -0.1,
+      "usage_metric": "pressure_rate",
+      "usage_series": [
+        {
+          "week": 1,
+          "value": 0.21
+        },
+        {
+          "week": 2,
+          "value": 0.31
+        },
+        {
+          "week": 3,
+          "value": 0.21
+        },
+        {
+          "week": 4,
+          "value": 0.2
+        }
+      ],
+      "snap_series": [
+        {
+          "week": 1,
+          "value": 0.64
+        },
+        {
+          "week": 2,
+          "value": 0.59
+        },
+        {
+          "week": 3,
+          "value": 0.74
+        },
+        {
+          "week": 4,
+          "value": 0.88
+        }
+      ],
+      "luck": 3.21,
+      "market_drift": -2.16,
+      "fc_value": null,
+      "fc_rank": null,
+      "market_gap": null,
+      "fc_history": [],
+      "breakout": null
+    },
+    "tag": "HOLD",
+    "tag_reasons": [
+      "Value in line with role"
+    ]
+  }
+]

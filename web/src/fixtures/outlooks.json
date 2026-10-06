@@ -1,0 +1,48 @@
+{
+  "8167": {
+    "signal": "SELL",
+    "summary": "Wilson is dealing with an ankle injury and his target share has slipped three weeks running. Market value has not caught up yet.",
+    "risks": [
+      "Could return healthy and reclaim a top-10 target share"
+    ],
+    "sources": [
+      {
+        "title": "Injury report",
+        "url": "https://www.nfl.com/injuries/"
+      }
+    ],
+    "updated": "2026-10-06T09:03:00Z",
+    "model": "claude-sonnet"
+  },
+  "9504": {
+    "signal": "HOLD",
+    "summary": "McBride remains the top target in Arizona. Production is in line with expected points, so there is no edge in moving him.",
+    "risks": [
+      "Quarterback play is volatile"
+    ],
+    "sources": [
+      {
+        "title": "Target share leaders",
+        "url": "https://www.fantasypros.com/"
+      }
+    ],
+    "updated": "2026-10-06T09:03:00Z",
+    "model": "claude-sonnet"
+  },
+  "11584": {
+    "signal": "BUY",
+    "summary": "Irving has out-snapped the starter in two straight games and now runs most passing-down routes. The role looks sticky ahead of a soft playoff schedule.",
+    "risks": [
+      "Coaching staff could revert to a committee",
+      "Low touchdown equity near the goal line"
+    ],
+    "sources": [
+      {
+        "title": "Week 4 snap counts",
+        "url": "https://www.pro-football-reference.com/"
+      }
+    ],
+    "updated": "2026-10-06T09:03:00Z",
+    "model": "claude-sonnet"
+  }
+}
