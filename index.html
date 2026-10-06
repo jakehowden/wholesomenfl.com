@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wholesome NFL GM</title>
+<meta name="description" content="Trade, waiver and FAAB decisions for a Sleeper superflex league, scored against the league's own settings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-id">
+    <h1 id="teamName">Wholesome NFL <span class="dim">GM</span></h1>
+    <span id="recordChip" class="chip chip-danger" hidden></span>
+    <span id="standingChip" class="chip" hidden></span>
+  </div>
+  <div class="topbar-meta" id="leagueMeta"></div>
+  <div class="topbar-tools">
+    <label class="field">
+      <span>League</span>
+      <input id="leagueInput" type="text" inputmode="numeric" spellcheck="false" autocomplete="off">
+    </label>
+    <button id="reloadBtn" class="btn btn-ghost" type="button">Reload</button>
+    <button id="themeBtn" class="btn btn-ghost" type="button" aria-label="Toggle colour theme">Theme</button>
+  </div>
+</header>
+
+<div id="boot" class="boot">
+  <div class="spinner" aria-hidden="true"></div>
+  <p id="bootMsg">Fetching league&hellip;</p>
+  <div class="bootbar"><div id="bootFill" class="bootfill"></div></div>
+</div>
+
+<div id="fatal" class="fatal" hidden>
+  <h2>Could not load</h2>
+  <p id="fatalMsg"></p>
+  <button id="fatalRetry" class="btn btn-primary" type="button">Try again</button>
+</div>
+
+<main id="app" hidden>
+
+  <section class="kpis" id="kpis" aria-label="Team summary"></section>
+
+  <section class="panel" id="sec-actions">
+    <div class="phead">
+      <h2>Do this week</h2>
+      <p class="pnote" id="actionsNote"></p>
+    </div>
+    <div class="actiongrid" id="actions"></div>
+  </section>
+
+  <div class="split">
+    <section class="panel grow" id="sec-waivers">
+      <div class="phead">
+        <h2>Waiver board</h2>
+        <p class="pnote">Free agents that would crack your starting lineup, scored with your settings.</p>
+      </div>
+      <div class="tablewrap"><table id="waiverTable"></table></div>
+      <p class="pfoot" id="waiverFoot"></p>
+    </section>
+
+    <section class="panel side" id="sec-partners">
+      <div class="phead">
+        <h2>Who answers offers</h2>
+        <p class="pnote" id="partnersNote"></p>
+      </div>
+      <div id="partners"></div>
+    </section>
+  </div>
+
+  <section class="panel" id="sec-trades">
+    <div class="phead">
+      <h2>Trade finder</h2>
+      <p class="pnote">Every target is on a rival's bench, outside their own best lineup &mdash; so nobody is asked to weaken what they start.</p>
+    </div>
+    <div class="tablewrap"><table id="tradeTable"></table></div>
+    <div id="tradeDetail" class="detail"></div>
+  </section>
+
+  <div class="split">
+    <section class="panel grow" id="sec-lineup">
+      <div class="phead">
+        <h2>Lineup check</h2>
+        <p class="pnote">Your best legal lineup versus what you have set. Slots you are losing by default are flagged.</p>
+      </div>
+      <div class="tablewrap"><table id="lineupTable"></table></div>
+    </section>
+
+    <section class="panel side" id="sec-surplus">
+      <div class="phead">
+        <h2>Your surplus</h2>
+        <p class="pnote">Rostered, but outside your own best lineup. This is your trade ammunition.</p>
+      </div>
+      <div id="surplus" class="chiprow"></div>
+    </section>
+  </div>
+
+  <section class="panel" id="sec-roster">
+    <div class="phead">
+      <h2>Your roster</h2>
+      <p class="pnote" id="rosterNote"></p>
+    </div>
+    <div class="tablewrap"><table id="rosterTable"></table></div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <p>Live from the Sleeper and FantasyCalc APIs on every load. No backend, no keys, nothing stored or sent anywhere.</p>
+  <p id="stamp" class="dim"></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
