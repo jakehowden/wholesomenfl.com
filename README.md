@@ -12,13 +12,18 @@ Live at **https://jakehowden.github.io/wholesomenfl.com/**
 GitHub Actions (cron)          web/public/data/*.json           GitHub Pages
 python -m pipeline.run  ───▶  meta, players, league,     ───▶  Vite + React SPA (web/)
 (Sleeper, nflverse,            outlooks, private/briefing.enc
- FantasyCalc, Claude)
+ FantasyCalc)                            ▲
+                               /gm in Claude Code: outlooks.json, private/briefing.enc
 ```
 
 - `pipeline/` is a Python 3.12 package. It fetches Sleeper, nflverse/ffopportunity and
   FantasyCalc data, re-scores every stat with the league's 51 scoring keys, runs the value
-  model and league analytics, optionally asks Claude for player outlooks and a weekly GM
-  briefing, and writes JSON into `web/public/data/`. Snapshots go to `data/history/`.
+  model and league analytics, and writes JSON into `web/public/data/`. Snapshots go to
+  `data/history/`. It makes no AI calls.
+- Player outlooks and the weekly GM briefing come from the `/gm` Claude Code command
+  (`.claude/commands/gm.md`), run by hand on your Claude plan. `python -m pipeline.gm prep`
+  picks who needs an outlook; Claude researches them and writes the briefing;
+  `python -m pipeline.gm publish` merges and encrypts.
 - `web/` is a static Vite + React + TypeScript app. It reads the JSON, pulls live
   Sleeper rosters in the browser, and runs the lineup, waiver and trade engines client side.
 - The briefing is encrypted (AES-GCM-256, key from PBKDF2-SHA256 with 250k iterations)
@@ -43,7 +48,7 @@ The data contract lives in `pipeline/schema.py` and `web/src/types/data.ts`.
 
 ```sh
 pip install -r requirements.txt
-python -m pipeline.run --no-llm      # writes web/public/data
+python -m pipeline.run               # writes web/public/data
 cd web && npm install && npm run dev
 ```
 
@@ -51,12 +56,16 @@ cd web && npm install && npm run dev
 
 ## Deploy
 
-`.github/workflows/build.yml` refreshes data daily at 10:00 UTC without Claude. On Tuesday
-and Saturday at 14:00 UTC it runs with Claude. It commits any changed data, then builds
-`web/` and deploys it to Pages. Pushes to `web/**` on main only redeploy. Manual runs
-take an `llm` input.
+`.github/workflows/build.yml` refreshes data daily at 10:00 UTC (and on manual dispatch).
+It commits any changed data, then builds `web/` and deploys it to Pages. Pushes to
+`web/**` on main only redeploy, including the outlooks and briefing that `/gm` pushes.
+
+## Weekly briefing (`/gm`)
+
+Set `BRIEFING_PASSPHRASE` in your shell (never commit it), open Claude Code in this repo
+and run `/gm`. It pulls the latest data, researches the scoped players, writes the
+briefing, encrypts it and pushes. The site asks for the same passphrase to unlock it.
 
 Setup:
 
-- Repository secrets: `ANTHROPIC_API_KEY` and `BRIEFING_PASSPHRASE`.
 - Settings → Pages → Source: **GitHub Actions**.

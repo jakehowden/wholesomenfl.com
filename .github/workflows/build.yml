@@ -2,15 +2,8 @@ name: build
 
 on:
   schedule:
-    - cron: "0 10 * * *"   # daily data refresh, no LLM
-    - cron: "0 14 * * 2"   # Tuesday: data + Claude outlooks and briefing
-    - cron: "0 14 * * 6"   # Saturday: data + Claude outlooks and briefing
+    - cron: "0 10 * * *"   # daily data refresh (outlooks/briefing come from /gm in Claude Code)
   workflow_dispatch:
-    inputs:
-      llm:
-        description: "Run Claude outlooks and the briefing"
-        type: boolean
-        default: false
   push:
     branches: [main]
     paths: ["web/**"]
@@ -32,16 +25,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Run pipeline
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          BRIEFING_PASSPHRASE: ${{ secrets.BRIEFING_PASSPHRASE }}
-          LLM: ${{ github.event.schedule == '0 14 * * 2' || github.event.schedule == '0 14 * * 6' || inputs.llm == true }}
-        run: |
-          if [ "$LLM" = "true" ]; then
-            python -m pipeline.run
-          else
-            python -m pipeline.run --no-llm
-          fi
+        run: python -m pipeline.run
 
       - name: Commit data
         run: |
